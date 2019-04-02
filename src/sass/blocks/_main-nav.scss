@@ -1,0 +1,36 @@
+.main-nav {
+    display: flex;
+    align-items: center;
+    background-color: rgba(3, 111, 212, 0.21);
+}
+
+.main-nav__list {
+    @include reset-list;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav__list li {
+    margin-right: 40px;
+}
+
+.main-nav__list li:last-child {
+    margin-right: 0;
+}
+
+.main-nav__list a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 8px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-nav__list a:hover,
+.main-nav__list a:focus {
+    text-decoration: none;
+}

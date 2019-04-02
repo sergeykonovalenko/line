@@ -1,0 +1,22 @@
+.top-nav {
+    display: flex;
+    align-items: center;
+    height: 105px;
+    background-color: #fff;
+}
+
+.top-nav__logo {
+
+}
+
+.top-nav__logo[href] {
+    cursor: pointer;
+}
+
+.top-nav__button {
+    margin-left: auto;
+}
+
+.top-nav__account {
+    margin-left: 37px;
+}

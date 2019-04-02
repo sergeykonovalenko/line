@@ -125,7 +125,7 @@ gulp.task('serve', function () {
 
     gulp.watch('src/*.html', gulp.series('html', 'refresh'));
     gulp.watch('src/fonts/*.{woff,woff2}', gulp.series('fonts', 'refresh'));
-    gulp.watch('src/sass/**/*.{scss,sass}', gulp.series('css'));
+    gulp.watch('src/sass/**/*.{scss,sass}', gulp.series('css', 'refresh'));
     gulp.watch('src/sass/vendor/*.css', gulp.series('css-vendor'));
     gulp.watch('src/img/**/*.*', gulp.series('img', 'refresh'));
     gulp.watch('src/js/*.js', gulp.series('js', 'refresh'));

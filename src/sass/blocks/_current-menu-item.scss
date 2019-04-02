@@ -1,0 +1,14 @@
+.current-menu-item {
+
+}
+
+.current-menu-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #ee423d;
+    background: linear-gradient(45deg, rgba(227,58,47,1) 0%, rgba(245,71,71,1) 100%);
+}

@@ -1,0 +1,27 @@
+.account {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #292a2c;
+    cursor: pointer;
+}
+
+.account:hover,
+.account:focus {
+    color: #292a2c;
+    text-decoration: none;
+}
+
+.account__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.account__icon path {
+    transition: all 0.3s ease;
+}
+
+.account:hover path {
+    fill: #2591f5;
+}

@@ -1,7 +1,6 @@
 {
     "name": "Интернет-провайдер Линия",
     "short_name": "Линия",
-    "start_url": "https://www.realinternet.ru",
     "icons": [
         {
             "src": "img/favicon/android-chrome-192x192.png",
