@@ -85,7 +85,7 @@ gulp.task('png', function () {
 gulp.task('jpg', function () {
     return gulp.src('src/img/**/*.jpg')
         .pipe(webp({
-            quality: 85
+            quality: 100
         }))
         .pipe(gulp.dest('build/img'));
 });

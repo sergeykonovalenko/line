@@ -1,7 +1,48 @@
 .offer {
+    position: relative;
+    z-index: 1;
     min-height: 540px;
+    padding-top: 140px;
+    margin-top: -70px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.no-webp .offer,
+.no-js .offer {
+    background-image: url("../img/bg/offer.jpg");
 }
 
 .webp .offer {
-    
+    background-image: url("../img/bg/offer.webp");
+}
+
+.offer__title {
+    position: relative;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.offer__title strong {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.3333em;
+    text-transform: uppercase;
+}
+
+.offer__polygon {
+    position: absolute;
+    z-index: 1;
+    top: 22px;
+    right: 0;
+    pointer-events: none;
 }
