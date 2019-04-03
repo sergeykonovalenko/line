@@ -1,0 +1,188 @@
+.ticket {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    padding: 11px 23px 48px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(14, 79, 160, 0.52);
+}
+
+.ticket__title {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.ticket__title h3 {
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 40px;
+    line-height: 1;
+    color: #42a1fa;
+}
+
+.ticket__title h3 strong {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+}
+
+.ticket__title p {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #69a5dd;
+}
+
+.ticket__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 29px;
+}
+
+.ticket__data {
+
+}
+
+.ticket__speed {
+    margin-bottom: 28px;
+}
+
+.ticket__speed-value {
+    display: flex;
+    margin-bottom: 11px;
+    font-weight: 300;
+    font-size: 36px;
+    color: #2b87f9;
+}
+
+.ticket__speed-value span {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.ticket__speed-value span::after {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    font-weight: 400;
+    font-size: 12px;
+    transform: translate(-50%, 0);
+}
+
+.ticket__speed-value span:first-child::after {
+    content: 'вход.';
+}
+
+.ticket__speed-value span:last-child::after {
+    content: 'исход.';
+}
+
+.ticket__speed-text {
+    width: 110px;
+    margin-bottom: 0;
+    line-height: 1.3333em;
+    color: #67a8f8;
+}
+
+.ticket__price {
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.ticket__price strong {
+    display: block;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1;
+    color: #000;
+}
+
+.ticket__speedometer {
+    flex-shrink: 0;
+    width: 185px;
+    height: 174px;
+    margin-top: 15px;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.no-js .ticket__speedometer--1,
+.no-webp .ticket__speedometer--1 {
+    background-image: url("../img/base/speedometer-10.png");
+}
+
+.webp .ticket__speedometer--1 {
+    background-image: url("../img/base/speedometer-10.webp");
+}
+
+.no-js .ticket__speedometer--2,
+.no-webp .ticket__speedometer--2 {
+    background-image: url("../img/base/speedometer-30.png");
+}
+
+.webp .ticket__speedometer--2 {
+    background-image: url("../img/base/speedometer-30.webp");
+}
+
+.no-js .ticket__speedometer--3,
+.no-webp .ticket__speedometer--3 {
+    background-image: url("../img/base/speedometer-50.png");
+}
+
+.webp .ticket__speedometer--3 {
+    background-image: url("../img/base/speedometer-50.webp");
+}
+
+.no-js .ticket__speedometer--4,
+.no-webp .ticket__speedometer--4 {
+    background-image: url("../img/base/speedometer-50.png");
+}
+
+.webp .ticket__speedometer--4 {
+    background-image: url("../img/base/speedometer-50.webp");
+}
+
+.no-js .ticket__speedometer--5,
+.no-webp .ticket__speedometer--5 {
+    background-image: url("../img/base/speedometer-100.png");
+}
+
+.webp .ticket__speedometer--5 {
+    background-image: url("../img/base/speedometer-100.webp");
+}
+
+.no-js .ticket__speedometer--6,
+.no-webp .ticket__speedometer--6 {
+    background-image: url("../img/base/speedometer-100.png");
+}
+
+.webp .ticket__speedometer--6 {
+    background-image: url("../img/base/speedometer-100.webp");
+}
+
+.ticket__description {
+    width: 288px;
+    margin-bottom: 39px;
+    font-size: 16px;
+    line-height: 1.125em;
+}
+
+.ticket__description p {
+    margin: 13px 0;
+}
+
+.ticket__description *:first-child {
+    margin-top: 0;
+}
+
+.ticket__description *:last-child {
+    margin-bottom: 0;
+}
+
+.ticket__button {
+    margin: auto auto 0;
+}

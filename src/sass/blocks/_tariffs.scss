@@ -1,0 +1,37 @@
+.tariffs {
+    padding-top: 105px;
+    padding-bottom: 120px;
+}
+
+.tariffs__title {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.tariffs__title h1 {
+    margin-bottom: 45px;
+}
+
+.tariffs__title p {
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 1.2em;
+}
+
+.tariffs__list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tariffs__item {
+    margin-right: 30px;
+}
+
+.tariffs__item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.tariffs__item:nth-child(n + 4) {
+    margin-top: 30px;
+}

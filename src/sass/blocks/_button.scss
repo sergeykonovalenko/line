@@ -1,5 +1,7 @@
 .button {
     display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
     user-select: none;
     vertical-align: middle;
     text-align: center;
@@ -7,6 +9,7 @@
     white-space: normal;
     word-wrap: normal;
     border-radius: 5px;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
@@ -18,7 +21,6 @@
     color: #292a2c;
     border: 2px solid #292a2c;
     border-radius: 3px;
-    transition: border-color 0.3s;
     overflow: hidden;
     outline: none;
 }
@@ -59,3 +61,25 @@
 .button--rayen:focus > span {
     transform: translate3d(0, 100%, 0);
 }
+
+.button--actions {
+    display: block;
+    width: 150px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-weight: 500;
+    color: #fff;
+    background: #f06762;
+    background: linear-gradient(0deg, rgba(229,95,84,1) 0%, rgba(247,108,108,1) 100%);
+    box-shadow: 0 3px 5px rgba(155, 29, 29, 0.8);
+}
+
+.button--actions:hover,
+.button--actions:focus {
+    color: #fff;
+    text-decoration: none;
+    background: #c33f3a;
+    background: linear-gradient(0deg, rgba(183,56,45,1) 0%, rgba(205,69,69,1) 100%);
+    box-shadow: 0 3px 5px rgba(155, 29, 29, 1);
+}
+

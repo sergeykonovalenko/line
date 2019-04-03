@@ -1,10 +1,9 @@
 .offer {
     position: relative;
     z-index: 1;
-    min-height: 540px;
-    padding-top: 140px;
     margin-top: -70px;
     color: #fff;
+    background-color: #030f5d;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -24,10 +23,18 @@
 .offer__title {
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    min-height: 540px;
+    padding-top: 140px;
+    padding-bottom: 130px;
+    text-align: center;
+}
+
+.offer__title h1 {
     font-weight: 400;
     font-size: 30px;
     line-height: 1.2em;
-    text-align: center;
 }
 
 .offer__title strong {
