@@ -1,8 +1,10 @@
 .ticket {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 370px;
     padding: 11px 23px 48px;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 3px 8px rgba(14, 79, 160, 0.52);
 }

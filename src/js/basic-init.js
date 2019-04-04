@@ -23,6 +23,28 @@ $(document).ready(function () {
         });
     }
 
+    // tickets animation
+    let tickets = document.querySelectorAll('.ticket--primary');
+    let tariffsList = document.querySelector('.tariffs__list');
+
+    tickets.forEach(function (ticket) {
+        let ticketHeight = ticket.offsetHeight;
+
+        var waypoint = new Waypoint({
+            element: ticket,
+            handler: function() {
+                if ( ticket.classList.contains('ticket--first-line') ) {
+                    tariffsList.classList.add('first-line-active-tickets');
+                }
+
+                if ( ticket.classList.contains('ticket--second-line') ) {
+                    tariffsList.classList.add('second-line-active-tickets');
+                }
+            },
+            offset: window.innerHeight - 350
+        });
+    });
+
     function isMobile() {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
     }

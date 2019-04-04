@@ -35,3 +35,37 @@
 .tariffs__item:nth-child(n + 4) {
     margin-top: 30px;
 }
+
+.tariffs__item:nth-child(2),
+.tariffs__item:nth-child(3),
+.tariffs__item:nth-child(5),
+.tariffs__item:nth-child(6) {
+    transition: transform 0.8s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.tariffs__item:nth-child(1),
+.tariffs__item:nth-child(4) {
+    z-index: 3;
+}
+
+.tariffs__item:nth-child(2),
+.tariffs__item:nth-child(5) {
+    opacity: 0;
+    z-index: 2;
+    transform: translate(-400px, 0);
+}
+
+.tariffs__item:nth-child(3),
+.tariffs__item:nth-child(6) {
+    opacity: 0;
+    z-index: 1;
+    transform: translate(-800px, 0);
+}
+
+.first-line-active-tickets .tariffs__item:nth-child(2),
+.first-line-active-tickets .tariffs__item:nth-child(3),
+.second-line-active-tickets .tariffs__item:nth-child(5),
+.second-line-active-tickets .tariffs__item:nth-child(6) {
+    opacity: 1;
+    transform: translate(0, 0);
+}
