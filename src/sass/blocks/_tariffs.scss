@@ -36,10 +36,10 @@
     margin-top: 30px;
 }
 
-.tariffs__item:nth-child(2),
-.tariffs__item:nth-child(3),
-.tariffs__item:nth-child(5),
-.tariffs__item:nth-child(6) {
+.tariffs__item.tariffs__item--animation:nth-child(2),
+.tariffs__item.tariffs__item--animation:nth-child(3),
+.tariffs__item.tariffs__item--animation:nth-child(5),
+.tariffs__item.tariffs__item--animation:nth-child(6) {
     transition: transform 0.8s cubic-bezier(0, 0, 0.2, 1);
 }
 

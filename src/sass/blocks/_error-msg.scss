@@ -1,0 +1,23 @@
+.error-msg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+
+.error-msg--hide {
+    display: none;
+}
+
+.error-msg--show {
+    display: block;
+}
+
+.error-msg__text {
+    display: block;
+    font-size: 12px;
+    line-height: 1.25em;
+    color: #fb5258;
+}

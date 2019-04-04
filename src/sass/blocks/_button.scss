@@ -8,6 +8,7 @@
     text-transform: uppercase;
     white-space: normal;
     word-wrap: normal;
+    border: 0;
     border-radius: 5px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -25,8 +26,7 @@
     outline: none;
 }
 
-.button--rayen:hover,
-.button--rayen:focus {
+.button--rayen:hover {
     color: #292a2c;
     text-decoration: none;
     border-color: #2591f5;
@@ -52,13 +52,11 @@
     transform: translate3d(-100%, 0, 0);
 }
 
-.button--rayen:hover::before,
-.button--rayen:focus::before {
+.button--rayen:hover::before {
     transform: translate3d(0, 0, 0);
 }
 
-.button--rayen:hover > span,
-.button--rayen:focus > span {
+.button--rayen:hover > span {
     transform: translate3d(0, 100%, 0);
 }
 

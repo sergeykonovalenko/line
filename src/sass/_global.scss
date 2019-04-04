@@ -18,3 +18,12 @@ img {
 picture {
     display: block;
 }
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 0;
+    color: #424242;
+    outline: none;
+}

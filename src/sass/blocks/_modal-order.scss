@@ -1,0 +1,32 @@
+.modal-order {
+
+}
+
+.modal-order .modal-content {
+    width: 770px;
+    padding: 28px 32px 40px;
+    border: none;
+}
+
+.modal-order__logo {
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.modal-order__title {
+    margin-bottom: 16px;
+    font-size: 30px;
+    text-align: center;
+    color: #3a3939;
+}
+
+.modal-order__form {
+
+}
+
+@media (min-width: 846px) {
+    .modal-order .modal-dialog {
+        max-width: 770px;
+    }
+}
+

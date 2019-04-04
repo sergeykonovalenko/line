@@ -1,0 +1,113 @@
+.form {
+
+}
+
+.form__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.form__item:last-child {
+    margin-bottom: 0;
+}
+
+.form__icon {
+
+}
+
+.form__icon path {
+    transition: fill 0.4s ease;
+}
+
+.form__item--focused .form__icon svg {
+    fill: #42a1fa;
+}
+
+.form__field-wrapper {
+    position: relative;
+    //padding-bottom: 20px;
+}
+
+.form__infix {
+    position: relative;
+    padding: 0.4375em 0;
+    font-size: 16px;
+    line-height: 1;
+    border-top: 0.84375em solid transparent;
+    border-bottom: 1px solid #aeafaf;
+}
+
+.form__infix::before,
+.form__infix::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.form__infix::before {
+    bottom: -1px;
+    height: 1px;
+    background-color: #aeafaf;
+}
+
+.form__infix::after {
+    bottom: -2px;
+    height: 2px;
+    background-color: #42a1fa;
+    transition: background-color 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    transform-origin: 50%;
+    transform: scaleX(0.5);
+    opacity: 0;
+}
+
+.form__item--focused .form__infix::after {
+    opacity: 1;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                opacity 0.1s cubic-bezier(0.25, 0.8, 0.25, 1),
+                background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scaleX(1);
+}
+
+.form__field {
+    caret-color: #42a1fa;
+}
+
+.form__label-wrapper {
+    position: absolute;
+    top: -0.84375em;
+    box-sizing: content-box;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 0.84375em;
+    line-height: 1.125;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.form__label {
+    position: absolute;
+    top: 1.28125em;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #aeafaf;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: perspective(100px);
+    transform-origin: 0 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.form__item--focused .form__label {
+    color: #42a1fa;
+    transform: translateY(-1.34375em) scale(.75);
+}
