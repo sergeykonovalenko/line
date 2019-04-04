@@ -24,8 +24,7 @@ $(document).ready(function () {
     }
 
     // tickets animation
-    let tickets = document.querySelectorAll('.ticket--primary');
-    let tariffsList = document.querySelector('.tariffs__list');
+    let tickets = document.querySelectorAll('.tariffs__item');
 
     tickets.forEach(function (ticket) {
         let ticketHeight = ticket.offsetHeight;
@@ -33,13 +32,7 @@ $(document).ready(function () {
         var waypoint = new Waypoint({
             element: ticket,
             handler: function() {
-                if ( ticket.classList.contains('ticket--first-line') ) {
-                    tariffsList.classList.add('first-line-active-tickets');
-                }
-
-                if ( ticket.classList.contains('ticket--second-line') ) {
-                    tariffsList.classList.add('second-line-active-tickets');
-                }
+                ticket.classList.add('tariffs__item--animation');
             },
             offset: window.innerHeight - 350
         });

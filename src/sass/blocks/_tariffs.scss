@@ -62,10 +62,10 @@
     transform: translate(-800px, 0);
 }
 
-.first-line-active-tickets .tariffs__item:nth-child(2),
-.first-line-active-tickets .tariffs__item:nth-child(3),
-.second-line-active-tickets .tariffs__item:nth-child(5),
-.second-line-active-tickets .tariffs__item:nth-child(6) {
+.tariffs__item:nth-child(2).tariffs__item--animation,
+.tariffs__item:nth-child(3).tariffs__item--animation,
+.tariffs__item:nth-child(5).tariffs__item--animation,
+.tariffs__item:nth-child(6).tariffs__item--animation {
     opacity: 1;
     transform: translate(0, 0);
 }
