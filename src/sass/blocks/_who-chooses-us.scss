@@ -38,8 +38,8 @@
     width: 75px;
     height: 75px;
     margin-right: 42px;
-    background: url("../img/base/wifi.svg") no-repeat center;
-    background-size: cover;
+    background: url("../img/base/wifi.svg") no-repeat 0 0;
+    background-size: contain;
 }
 
 .who-chooses-us__list {
