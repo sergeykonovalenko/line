@@ -25,9 +25,8 @@
     fill: #42a1fa;
 }
 
-.form__field-wrapper {
-    position: relative;
-    //padding-bottom: 20px;
+.form__item--invalid .form__icon svg {
+    fill: #fb5258;
 }
 
 .form__infix {
@@ -36,8 +35,8 @@
     font-size: 16px;
     line-height: 1;
     border-top: 0.84375em solid transparent;
-    border-bottom: 1px solid #aeafaf;
 }
+
 
 .form__infix::before,
 .form__infix::after {
@@ -53,6 +52,10 @@
     background-color: #aeafaf;
 }
 
+.form__item--invalid .form__infix::before {
+    background-color: #fb5258;
+}
+
 .form__infix::after {
     bottom: -2px;
     height: 2px;
@@ -61,6 +64,10 @@
     transform-origin: 50%;
     transform: scaleX(0.5);
     opacity: 0;
+}
+
+.form__item--invalid .form__infix::after {
+    background-color: #fb5258;
 }
 
 .form__item--focused .form__infix::after {
@@ -109,5 +116,12 @@
 
 .form__item--focused .form__label {
     color: #42a1fa;
+}
+
+.form__item--invalid .form__label {
+    color: #fb5258;
+}
+
+.form__item--should-float .form__label {
     transform: translateY(-1.34375em) scale(.75);
 }

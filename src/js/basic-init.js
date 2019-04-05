@@ -38,84 +38,156 @@ $(document).ready(function () {
         });
     });
 
+    ////////////////////////////////////////////////////////////////////////////
+
     // masked input
     $('input[type="tel"]').mask('+7 (999) 999-99-99', {
-        completed: function() {
-            this.addClass('phone-valid');
+        autoclear: false,
+        completed: function () {
+            this.addClass('mask-filled');
+        }
+    });
 
-            let formItemAll = document.querySelectorAll('.form__item') || false;
-            if (formItemAll) {
-                formItemAll.forEach(function (formItem) {
-                    formItem.classList.add('ng-valid');
-                    formItem.classList.remove('ng-invalid');
+    // input event tracking
+    let requiredInputAll = document.querySelectorAll('.required');
+
+    requiredInputAll.forEach(function (requiredInput) {
+        requiredInput.addEventListener('keyup', function () {
+
+            let form = requiredInput.closest('form');
+            let requiredInputTargeted = form.querySelectorAll('.required');
+            let buttonSubmit = form.querySelector('button[data-submit]');
+            let validationState = true;
+            let inputPhone = form.querySelector('input[type="tel"]');
+            let phoneMaskState = inputPhone.classList.contains('mask-filled');
+
+            setTimeout(function () {
+                requiredInputTargeted.forEach(function (requiredInputTargetedItem) {
+                    if (requiredInputTargetedItem.classList.contains('error')) {
+                        validationState = false;
+                    }
                 });
-            }
-        }
+
+                if (validationState && phoneMaskState) {
+                    buttonSubmit.removeAttribute('disabled');
+                }
+
+                if ( requiredInput.classList.contains('valid') ) {
+                    requiredInput.closest('.form__item').classList.remove('form__item--invalid');
+                }
+
+                if ( requiredInput.classList.contains('error') ) {
+                    requiredInput.closest('.form__item').classList.add('form__item--invalid');
+                }
+            }, 50);
+        });
     });
 
-    let fieldPhoneAll = document.querySelectorAll('input[type="tel"');
-
-    fieldPhoneAll.forEach(function (fieldPhone) {
-        fieldPhone.oninput = function () {
-            console.log(555);
-        }
-    });
-
-    // form
+    // tracking and removing focus
     let formFields = document.querySelectorAll('.form__field');
 
     formFields.forEach(function (formField) {
+
         formField.addEventListener('focus', function () {
             let formItem = this.closest('.form__item');
-            formItem.classList.add('form__item--focused');
+            formItem.classList.add('form__item--focused', 'form__item--should-float');
         });
 
         formField.addEventListener('blur', function () {
             let formItem = this.closest('.form__item');
-            
-            if ( formField.classList )
             formItem.classList.remove('form__item--focused');
+
+            if ( !formField.classList.contains('error') && formField.value === '') {
+                formItem.classList.remove('form__item--should-float');
+            }
+
+            if ( formField.classList.contains('error') ) {
+                formItem.classList.add('form__item--invalid');
+            }
         });
     });
 
-    $('#js-modal-order').on('shown.bs.modal', function () {
+    // disabling validation when closing a modal
+    let modalOrder = $('#js-modal-order');
+    let validator;
+
+    modalOrder.on('shown.bs.modal', function () {
         $('#modal-form-phone').trigger('focus');
     });
 
-
-    // Send callback / Send request / Buy product
-    let btnOrder = document.querySelector('.btn-order');
-
-    btnOrder.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        let request_frm = this.closest('form');
-        let errorMsgAll = request_frm.querySelectorAll('.error-msg');
-        errorMsgAll.forEach(function (errorMsg) {
-            errorMsg.classList.add('error-msg--hide')
-        });
-
-        let errorFlag = 0;
-        let rqfAll = request_frm.querySelectorAll('.rqf');
-        rqfAll.forEach(function (rqf) {
-            rqf.classList.remove('error-fld');
-            if ( rqf.value === '' || rqf.classList.contains('fld-email') && !isEmail(rqf.value) ) {
-                errorFlag++;
-                rqf.classList.add('error-fld')
-            }
-        });
-
-        if ( !errorFlag ) {
-            function f() {
-
-            }
-        } else {
-            errorMsgAll.forEach(function (errorMsg) {
-                errorMsg.classList.add('error-msg--show')
-            });
-        }
+    modalOrder.on('hidden.bs.modal', function () {
+        modalOrder.find('button[data-submit]').attr('disabled', 'disabled');
+        modalOrder.find('input').val('');
+        // $(this).find('.form__item').removeClass('form__item--invalid');
+        // validator.destroy();
     });
 
+    // form submission
+    $('[data-submit]').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent('form').submit();
+    });
+
+    $.validator.addMethod(
+        "regex",
+        function(value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Пожалуйста, проверьте свои данные"
+    );
+
+    function valEl(el) {
+        validator = el.validate({
+            rules:{
+                phone:{
+                    required:true,
+                    regex: '^([\+]+)*[0-9\x20\x28\x29\-]{5,20}$'
+                },
+                name:{
+                    required:false
+                }
+            },
+            messages:{
+                phone:{
+                    required:'Поле обязательно для заполнения',
+                    regex:'Неправильный формат телефона'
+                },
+                name:{
+                    required:'Поле обязательно для заполнения'
+                }
+            },
+            submitHandler: function (form) {
+                $('.loader').fadeIn();
+                var $form = $(form);
+                var $formId = $(form).attr('data-id');
+
+                $.ajax({
+                    type: 'POST',
+                    url: $form.attr('action'),
+                    data: $form.serialize(),
+                })
+                    .always(function (response) {
+                        setTimeout(function (){
+                            $('.loader').fadeOut();
+                            $('.modal-order').modal('hide');
+                        },10);
+                        setTimeout(function (){
+                            $('.modal-thank-you').modal('show');
+                            $form.trigger('reset');
+                        },1100);
+                    });
+
+                return false;
+            }
+        })
+    }
+
+    $('.js-form').each(function() {
+        valEl( $(this) );
+    });
+
+    ////////////////////////////////////////////////////////////////////////////
 
     function isMobile() {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));

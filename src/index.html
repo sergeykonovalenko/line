@@ -48,7 +48,7 @@
                         </a>
                         <a class="top-nav__account account" href="#" title="Кабинет">
                             <span class="account__icon" aria-hidden="true">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20.3 23.6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20.3 23.6">
                                     <path d="M13.5 14.5c-.1 0-1.1-.5-.5-2.2 1.5-1.6 2.7-4.1 2.7-6.5C15.7 2 13.2 0 10.2 0 7.3 0 4.8 2 4.8 5.8c0 2.5 1.1 5 2.7 6.5.5 1.5-.5 2.1-.8 2.2C3.6 15.6 0 17.6 0 19.6v.7c0 2.7 5.3 3.3 10.2 3.3s10.1-.6 10.1-3.3v-.7c0-2.1-3.6-4.1-6.8-5.1z" fill="#292a2c"/>
                                 </svg>
                             </span>
@@ -338,46 +338,98 @@
         </div>
     </section>
 
-    <!-- Modal -->
-    <div class="modal-order modal fade" id="js-modal-order" tabindex="-1" role="dialog" aria-hidden="true">
+    <section class="who-chooses-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="who-chooses-us__title section-title">Кто нас выбирает</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="who-chooses-us__lead">
+                        Развивайте свой бизнес, используя неограниченный доступ к сети в любом объекте офисной и коммерческой недвижимости
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="who-chooses-us__list">
+                        <ul>
+                            <li>
+                                <h3>Офисы<br> и Бизнес-центры</h3>
+                                <p>Компании, нацеленные на успех и бизнес-рост, нуждаются в быстрой и надежной обработке больших массивов информации. Мы организуем единую телекоммуникационную структуру для Вашей компании и дадим 100% гарантию на все наши услуги.</p>
+                            </li>
+                            <li>
+                                <h3>Коммерческие заведения</h3>
+                                <p>Один из главных параметров высокого сервиса - скорость обработки информации для сотрудников и легкий, быстрый доступ к Интернету для клиентов и гостей. Наши специалисты обеспечат скоростной WiFi даже при многочисленном подключении к сети.</p>
+                            </li>
+                            <li>
+                                <h3>Предприятия<br> и Заводы</h3>
+                                <p>Весь арсенал современных систем управления производством и организации <br> требует мощной телекоммуникационной поддержки. Мы предложим эффективные бизнес-решения и предоставим услуги Интернет связи и каналов передачи данных.</p>
+                            </li>
+                            <li>
+                                <h3>ТРЦ, Магазины<br> и Склады</h3>
+                                <p>Организация работы торгового центра, координация складских поставок, автоматизация работы с клиентской базой, контроль  движения товаров и их оплаты требуют быстрой обработки данных. Мы позаботимся, чтобы Ваши бизнес-процессы проходили стремительно и бесперебойно.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal order -->
+    <div class="modal-order modal-common modal fade" id="js-modal-order" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
+                <button class="modal-common__close" type="button" data-dismiss="modal" title="Закрыть">Закрыть</button>
                 <img class="modal-order__logo" src="img/base/logo.svg" width="160" height="34" alt="Интернет-провайдер Линия">
                 <p class="modal-order__title">Укажите Ваши контакты</p>
-                <form class="modal-order__form modal-form form" action="#" method="POST">
+                <form class="modal-order__form modal-form form js-form" data-id="popupResult" action="#" method="POST">
                     <ul class="modal-form__list">
                         <li class="modal-form__item form__item">
                             <span class="modal-form__icon form__icon" aria-hidden="true">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 459 459" fill="#aeafaf"><path d="M91.8 198.9c35.7 71.4 96.9 130 168.3 168.3l56.1-56.1c7.65-7.65 17.85-10.2 25.5-5.1q42.07 15.3 91.8 15.3c15.3 0 25.5 10.2 25.5 25.5v86.7c0 15.3-10.2 25.5-25.5 25.5C193.8 459 0 265.2 0 25.5 0 10.2 10.2 0 25.5 0h89.25c15.3 0 25.5 10.2 25.5 25.5a288.79 288.79 0 0 0 15.3 91.8c2.55 7.65 0 17.85-5.1 25.5z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 459 459" fill="#aeafaf"><path d="M91.8 198.9c35.7 71.4 96.9 130 168.3 168.3l56.1-56.1c7.65-7.65 17.85-10.2 25.5-5.1q42.07 15.3 91.8 15.3c15.3 0 25.5 10.2 25.5 25.5v86.7c0 15.3-10.2 25.5-25.5 25.5C193.8 459 0 265.2 0 25.5 0 10.2 10.2 0 25.5 0h89.25c15.3 0 25.5 10.2 25.5 25.5a288.79 288.79 0 0 0 15.3 91.8c2.55 7.65 0 17.85-5.1 25.5z"/></svg>
                             </span>
-                            <div class="form__field-wrapper">
-                                <div class="modal-form__infix form__infix">
-                                    <input class="modal-form__field form__field rqf" id="modal-form-phone" type="tel" name="phone" required autocomplete="off" placeholder="">
-                                    <span class="modal-form__label-wrapper form__label-wrapper">
-                                        <label class="modal-form__label form__label" for="modal-form-phone">Ваш номер телефона*</label>
-                                    </span>
-                                </div>
-                                <p class="error-msg">
-                                    <span class="error-msg__text">Неправильный формат телефона</span>
-                                </p>
+                            <div class="modal-form__infix form__infix">
+                                <input class="modal-form__field form__field required" id="modal-form-phone" type="tel" name="phone" autocomplete="off" placeholder="">
+                                <span class="modal-form__label-wrapper form__label-wrapper">
+                                    <label class="modal-form__label form__label" for="modal-form-phone">Ваш номер телефона*</label>
+                                </span>
                             </div>
                         </li><!-- end form__item -->
                         <li class="modal-form__item form__item">
                             <span class="modal-form__icon form__icon" aria-hidden="true">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="38" viewBox="0 0 20.3 23.6" fill="#aeafaf"><path d="M13.5 14.5c-.1 0-1.1-.5-.5-2.2 1.5-1.6 2.7-4.1 2.7-6.5C15.7 2 13.2 0 10.2 0 7.3 0 4.8 2 4.8 5.8c0 2.5 1.1 5 2.7 6.5.5 1.5-.5 2.1-.8 2.2C3.6 15.6 0 17.6 0 19.6v.7c0 2.7 5.3 3.3 10.2 3.3s10.1-.6 10.1-3.3v-.7c0-2.1-3.6-4.1-6.8-5.1z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="38" viewBox="0 0 20.3 23.6" fill="#aeafaf"><path d="M13.5 14.5c-.1 0-1.1-.5-.5-2.2 1.5-1.6 2.7-4.1 2.7-6.5C15.7 2 13.2 0 10.2 0 7.3 0 4.8 2 4.8 5.8c0 2.5 1.1 5 2.7 6.5.5 1.5-.5 2.1-.8 2.2C3.6 15.6 0 17.6 0 19.6v.7c0 2.7 5.3 3.3 10.2 3.3s10.1-.6 10.1-3.3v-.7c0-2.1-3.6-4.1-6.8-5.1z"></path></svg>
                             </span>
-                            <div class="form__field-wrapper">
-                                <div class="modal-form__infix form__infix">
-                                    <input class="modal-form__field form__field" id="modal-form-name" type="text" name="name" required autocomplete="off" placeholder="">
-                                    <span class="modal-form__label-wrapper form__label-wrapper">
-                                        <label class="modal-form__label form__label" for="modal-form-name">Ваше имя</label>
-                                    </span>
-                                </div>
+                            <div class="modal-form__infix form__infix">
+                                <input class="modal-form__field form__field" id="modal-form-name" type="text" name="name" autocomplete="off" placeholder="">
+                                <span class="modal-form__label-wrapper form__label-wrapper">
+                                    <label class="modal-form__label form__label" for="modal-form-name">Ваше имя</label>
+                                </span>
                             </div>
                         </li><!-- end form__item -->
                     </ul>
-                    <button class="modal-form__button button button--actions btn-order">Заказать</button>
+                    <button class="modal-form__button button button--actions" data-submit disabled>Заказать</button>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader__icon">
+            <img src="img/base/loader.svg" alt="">
+        </div>
+    </div>
+
+    <!-- Modal thank you -->
+    <div class="modal-thank-you modal-common modal fade" id="js-modal-thank-you" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button class="modal-common__close" type="button" data-dismiss="modal" title="Закрыть">Закрыть</button>
+                <h2>Спасибо, мы с Вами скоро свяжемся!</h2>
             </div>
         </div>
     </div>
@@ -392,6 +444,8 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Masked Input -->
     <script src="js/jquery.maskedinput.min.js"></script>
+    <!-- jQuery Validate -->
+    <script src="js/jquery.validate.min.js"></script>
     <!-- jQuery mb.browser -->
     <script src="js/jquery.mb.browser.js"></script>
     <!-- Basic Init -->

@@ -79,5 +79,16 @@
     background: #c33f3a;
     background: linear-gradient(0deg, rgba(183,56,45,1) 0%, rgba(205,69,69,1) 100%);
     box-shadow: 0 3px 5px rgba(155, 29, 29, 1);
+    outline: none;
 }
 
+.button--actions[disabled] {
+    background: #bebfbf;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.button--actions[disabled]:hover,
+.button--actions[disabled]:focus {
+    background-color: #b0b0b0;
+}

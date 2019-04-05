@@ -23,10 +23,17 @@
 @import "blocks/tariffs";
 @import "blocks/section-title";
 @import "blocks/ticket";
-/* ==========================================================================
-   Modal
+@import "blocks/who-chooses-us";
+/* Modal
    ========================================================================== */
+@import "blocks/modal-common";
 @import "blocks/modal-order";
 @import "blocks/modal-form";
 @import "blocks/form";
-@import "blocks/error-msg";
+@import "blocks/error";
+/* Loader
+   ========================================================================== */
+@import "blocks/loader";
+/* Thank you page
+   ========================================================================== */
+@import "blocks/modal-thank-you";
