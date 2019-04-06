@@ -1,0 +1,31 @@
+.our-clients {
+    padding-bottom: 110px;
+}
+
+.our-clients__title {
+    margin-bottom: 60px;
+}
+
+.our-clients__list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.our-clients__item {
+    width: 33.33333%;
+}
+
+.our-clients__item:nth-child(n + 4) {
+    margin-top: 50px;
+}
+
+.our-clients__item picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-clients__item img {
+    max-width: 85%;
+}
