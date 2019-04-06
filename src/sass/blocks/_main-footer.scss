@@ -1,0 +1,150 @@
+.main-footer {
+    color: #fff;
+    padding: 50px 0;
+    background-color: #0b1155;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.no-webp .main-footer,
+.no-js .main-footer {
+    background-image: url("../img/bg/footer.jpg");
+}
+
+.webp .main-footer {
+    background-image: url("../img/bg/footer.webp");
+}
+
+.main-footer a {
+    color: #fff;
+}
+
+.main-footer a:hover,
+.main-footer a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-footer_description {
+    line-height: 1.5em;
+}
+
+.main-footer_description p {
+    margin: 18px 0;
+}
+
+.main-footer_description strong {
+    font-weight: 700;
+}
+
+.main-footer_description *:first-child {
+    margin-top: 0;
+}
+
+.main-footer_description *:last-child {
+    margin-bottom: 0;
+}
+
+.main-footer__contacts {
+    width: 270px;
+    padding-left: 15px;
+    padding-right: 30px;
+}
+
+.main-footer__contacts p:first-child {
+    margin-bottom: 24px;
+}
+
+.main-footer__contacts ul {
+    @include reset-list;
+}
+
+.main-footer__contacts li {
+    margin-bottom: 15px;
+}
+
+.main-footer__contacts li:last-child {
+    margin-bottom: 0;
+}
+
+.main-footer__contacts a {
+    position: relative;
+    display: inline-block;
+    padding-left: 44px;
+    cursor: pointer;
+}
+
+.main-footer__contacts a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    transform: translate(0, -50%);
+}
+
+.main-footer__contacts a:hover::before,
+.main-footer__contacts a:focus::before {
+    opacity: 1;
+}
+
+.main-footer__contacts li:nth-child(1) a::before {
+    width: 25px;
+    height: 19px;
+    background-image: url("../img/base/mail.svg");
+}
+
+.main-footer__contacts li:nth-child(2) a::before {
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/base/phone.svg");
+}
+
+.main-footer__logo {
+    width: 400px;
+}
+
+.main-footer__logo-link {
+    display: inline-block;
+    margin-bottom: 11px;
+}
+
+.main-footer__logo-link[href] {
+    cursor: pointer;
+}
+
+.main-footer__social {
+    @include reset-list;
+    margin-bottom: 32px;
+}
+
+.main-footer__seo-links {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-footer__seo-links li {
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.main-footer__seo-links a {
+    display: block;
+    padding: 7px 23px;
+    line-height: 1;
+    background-color: #1d6bc5;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.main-footer__seo-links a:hover,
+.main-footer__seo-links a:focus {
+    background-color: #2591f5;
+}

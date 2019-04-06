@@ -107,7 +107,7 @@ $(document).ready(function () {
         });
     });
 
-    // disabling validation when closing a modal
+    // focus and disabling validation when closing a modal
     let modalOrder = $('#js-modal-order');
     let validator;
 
