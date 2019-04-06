@@ -1,0 +1,64 @@
+.licenses {
+    padding-bottom: 110px;
+}
+
+.licenses__title {
+    margin-bottom: 60px;
+}
+
+.licenses__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    padding: 40px 50px 47px 200px;
+    min-height: 315px;
+    color: #292828;
+    background-color: #ecedee;
+    border-radius: 10px;
+    box-shadow: 0 3px 1px rgba(37, 130, 221, 0.56);
+}
+
+.licenses__item::before {
+    content: '';
+    position: absolute;
+    top: 47px;
+    left: 42px;
+    width: 96px;
+    height: 96px;
+    background: url("../img/base/license.svg") no-repeat 0 0;
+    background-size: contain;
+}
+
+.licenses__text {
+
+}
+
+.licenses__text h3 {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #277ff0;
+}
+
+.licenses__text p {
+    margin: 18px 0;
+    line-height: 1.33333em;
+}
+
+.licenses__link {
+    display: inline-block;
+    margin-top: auto;
+    margin-left: auto;
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 24px;
+    color: #3694f1;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.licenses__link:hover {
+    color: #0f66bb;
+    text-decoration: none;
+}
