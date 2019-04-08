@@ -23,6 +23,11 @@ $(document).ready(function () {
         });
     }
 
+    // hamburger
+    $('.hamburger').on('click', function () {
+        $('body').toggleClass('show-main-nav');
+    });
+
     // tickets animation
     let tickets = document.querySelectorAll('.tariffs__item');
 

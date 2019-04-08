@@ -1,3 +1,14 @@
 .main-header {
 
 }
+
+@media (min-width: 576px) and (max-width: 1200px) {
+    .main-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-header .container {
+        max-width: 100%;
+    }
+}

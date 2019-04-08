@@ -31,12 +31,12 @@
     transition: all 0.3s ease;
 }
 
-.services__item:last-child .services__link {
+.services__link--two-lines {
     padding-top: 8px;
     padding-bottom: 7px;
 }
 
-.services__item:last-child .services__link {
+.services__item:nth-child(5) .services__link {
     width: 234px;
 }
 
@@ -53,7 +53,7 @@
     margin-bottom: 8px;
 }
 
-.services__item:last-child .services__icon {
+.services__icon--two-lines {
     margin-bottom: 3px;
 }
 
@@ -73,7 +73,6 @@
 }
 
 .services__name {
-    margin-top: auto;
     font-weight: 500;
     font-size: 18px;
     line-height: 1;
