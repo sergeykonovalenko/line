@@ -54,3 +54,14 @@
     right: 0;
     pointer-events: none;
 }
+
+@media screen and (max-width: 1260px) {
+    .offer__polygon {
+        top: 90px;
+        right: -135px;
+    }
+
+    .offer__polygon img {
+        max-width: 85%;
+    }
+}

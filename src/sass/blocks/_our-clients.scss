@@ -29,3 +29,13 @@
 .our-clients__item img {
     max-width: 85%;
 }
+
+@media screen and (max-width: 992px) {
+    .our-clients__item {
+        width: 50%;
+    }
+
+    .our-clients__item:nth-child(n + 3) {
+        margin-top: 50px;
+    }
+}

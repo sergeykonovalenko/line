@@ -1,6 +1,7 @@
 .account {
     display: flex;
     align-items: center;
+    padding: 10px;
     font-size: 20px;
     color: #292a2c;
     cursor: pointer;
@@ -25,4 +26,14 @@
 .account:hover path,
 .account:focus path {
     fill: #2591f5;
+}
+
+@media screen and (max-width: 992px) {
+    .account__icon {
+        margin-right: 0;
+    }
+
+    .account__text {
+        display: none;
+    }
 }

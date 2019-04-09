@@ -85,10 +85,16 @@
     }
 
     .who-chooses-us__list li:nth-child(n + 3) {
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
-    .who-chooses-us__list h3 br {
+    .who-chooses-us__list br {
         display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .who-chooses-us__list li {
+        width: 330px;
     }
 }

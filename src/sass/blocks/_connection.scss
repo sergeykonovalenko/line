@@ -232,3 +232,13 @@
         bottom: auto;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .connection__list {
+        width: 100%;
+    }
+
+    .connection__list li {
+        width: 330px;
+    }
+}
