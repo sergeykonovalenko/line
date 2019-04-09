@@ -54,3 +54,9 @@
 .main-nav__list a:focus::after {
     transform: scaleX(1);
 }
+
+@media screen and (max-width: 1260px) {
+    .main-nav {
+        display: none;
+    }
+}

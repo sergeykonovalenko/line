@@ -23,12 +23,17 @@ $(document).ready(function () {
         });
     }
 
-    // hamburger
-    $('.hamburger').on('click', function () {
+    // show/hide mobile menu
+    $('.top-nav__hamburger').on('click', function () {
         $('body').toggleClass('show-main-nav');
     });
 
-    // tickets animation
+    $('.drawer-backdrop, .top-nav__button').on('click', function () {
+        $('body').removeClass('show-main-nav');
+    });
+
+
+    // animation of tariff cards
     let tickets = document.querySelectorAll('.tariffs__item');
 
     tickets.forEach(function (ticket) {
@@ -44,6 +49,7 @@ $(document).ready(function () {
     });
 
     ////////////////////////////////////////////////////////////////////////////
+    // FORM PROCESSING
 
     // masked input
     $('input[type="tel"]').mask('+7 (999) 999-99-99', {

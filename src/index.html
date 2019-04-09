@@ -38,9 +38,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-xl-8 d-flex align-items-center">
-                        <button class="hamburger" type="button" title="Главное меню">
-                            <span class="hamburger-inner"></span>
-                        </button>
+                        <button class="top-nav__hamburger" type="button" title="Главное меню"><span></span></button>
                         <a class="top-nav__logo" title="Интернет-провайдер Линия">
                             <img src="img/base/logo.svg" width="260" height="55" alt="Интернет-провайдер Линия">
                         </a>
@@ -74,6 +72,44 @@
                 </div>
             </div>
         </nav>
+        <div class="sidenav">
+            <div class="sidenav__box">
+                <ul>
+                    <li>Услуги</li>
+                    <li>Заявка на подключение</li>
+                    <li>О компании</li>
+                </ul>
+                    5584 515<br>574 5285<hr>4451555
+                <ul>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                    <li>8456 2852 564 2454</li>
+                </ul>
+            </div>
+        </div>
+        <div class="drawer-backdrop"></div>
     </header>
 
     <section class="offer" data-speed="3" data-type="background">
@@ -103,6 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <h2 class="visually-hidden">Услуги</h2>
                     <ul class="services__list">
                         <li class="services__item">
                             <a class="services__link services__link--two-lines" href="#">
@@ -469,23 +506,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6">
-                    <div class="licenses__item">
-                        <div class="licenses__text">
-                            <h3>Название документа</h3>
-                            <p>Описание документа. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque delectus distinctio dolorum ex impedit iusto</p>
-                        </div>
-                        <a class="licenses__link" href="documents/license.pdf" target="_blank">Открыть</a>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="licenses__item">
-                        <div class="licenses__text">
-                            <h3>Название документа</h3>
-                            <p>Описание документа. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque delectus distinctio dolorum ex impedit iusto</p>
-                        </div>
-                        <a class="licenses__link" href="documents/license.pdf" target="_blank">Открыть</a>
-                    </div>
+                <div class="col-12">
+                    <ul class="licenses__list">
+                        <li class="licenses__item">
+                            <div class="licenses__text">
+                                <h3>Название документа</h3>
+                                <p>Описание документа. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque delectus distinctio dolorum ex impedit iusto</p>
+                            </div>
+                            <a class="licenses__link" href="documents/license.pdf" target="_blank">Открыть</a>
+                        </li>
+                        <li class="licenses__item">
+                            <div class="licenses__text">
+                                <h3>Название документа</h3>
+                                <p>Описание документа. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque delectus distinctio dolorum ex impedit iusto</p>
+                            </div>
+                            <a class="licenses__link" href="documents/license.pdf" target="_blank">Открыть</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -546,12 +583,12 @@
     <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-7 col-xl-5 order-2 order-xl-1">
                     <div class="main-footer_description">
                         <p>Компания <strong>Линия</strong> — выгодный и прогрессивный интернет провайдер для юридических лиц по  Москве и Московской области. Имея за плечами солидный опыт работы в сегменте В2В, мы обрели репутацию надежного партнера, предлагающего корпоративным пользователям удобные технологические решения и максимальную отдачу в решении индивидуальных потребностей бизнеса.</p>
                     </div>
                 </div>
-                <div class="col-md-7 d-flex">
+                <div class="col-12 col-xl-7 d-flex order-1 order-xl-2">
                     <div class="main-footer__contacts">
                         <p>Контакты:</p>
                         <ul>
@@ -590,7 +627,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="main-footer__seo-links">
+                        <ul class="main-footer__seo-links-desktop seo-links">
                             <li><a href="#">Услуги</a></li>
                             <li><a href="#">О компании</a></li>
                             <li><a href="#">Интернет</a></li>
@@ -602,6 +639,19 @@
                             <li><a href="#">Тарифы</a></li>
                         </ul>
                     </div>
+                </div>
+                <div class="col-5 d-xl-none order-3">
+                    <ul class="main-footer__seo-links-mobile seo-links">
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Интернет</a></li>
+                        <li><a href="#">VPN</a></li>
+                        <li><a href="#">Cети</a></li>
+                        <li><a href="#">SMS – авторизация</a></li>
+                        <li><a href="#">Видеонаблюдение</a></li>
+                        <li><a href="#">Усиление сотовой связи</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

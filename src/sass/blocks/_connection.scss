@@ -161,3 +161,74 @@
     order: 2;
     margin-bottom: 22px;
 }
+
+@media screen and (max-width: 1260px) {
+    .connection__list {
+        width: 740px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .connection__list li {
+        margin-right: 30px;
+    }
+
+    .connection__list li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .connection__list li:nth-child(1),
+    .connection__list li:nth-child(3),
+    .connection__list li:nth-child(5) {
+        margin-top: 0;
+    }
+
+    .connection__list li:nth-child(n + 3) {
+        margin-top: 60px;
+    }
+
+    .connection__list li,
+    .connection__list li:last-child {
+        margin-left: 0;
+    }
+
+    .connection__list li:nth-child(2),
+    .connection__list li:nth-child(4) {
+        height: auto;
+    }
+
+    .connection__list li:nth-child(2)::before,
+    .connection__list li:nth-child(4)::before {
+        order: 1;
+        margin-bottom: 28px;
+    }
+
+    .connection__list li:nth-child(2) strong,
+    .connection__list li:nth-child(4) strong {
+        order: 2;
+        margin-bottom: 15px;
+    }
+
+    .connection__list li:nth-child(2) h3,
+    .connection__list li:nth-child(4) h3 {
+        order: 3;
+    }
+
+    .connection__list li:nth-child(2) p,
+    .connection__list li:nth-child(4) p {
+        order: 4;
+        margin-bottom: 0;
+    }
+
+    .connection__list li:nth-child(2) strong::before,
+    .connection__list li:nth-child(4) strong::before {
+        top: auto;
+        bottom: 11px;
+    }
+
+    .connection__list li:nth-child(2) strong::after,
+    .connection__list li:nth-child(4) strong::after {
+        top: -14px;
+        bottom: auto;
+    }
+}

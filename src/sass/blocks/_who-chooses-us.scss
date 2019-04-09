@@ -74,3 +74,21 @@
     margin-bottom: 0;
     line-height: 1.33333em;
 }
+
+@media screen and (max-width: 1260px) {
+    .who-chooses-us__list li {
+        width: 450px;
+    }
+
+    .who-chooses-us__list li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .who-chooses-us__list li:nth-child(n + 3) {
+        margin-top: 40px;
+    }
+
+    .who-chooses-us__list h3 br {
+        display: none;
+    }
+}

@@ -1,4 +1,6 @@
 .top-nav {
+    position: relative;
+    z-index: 6;
     display: flex;
     align-items: center;
     height: 105px;
@@ -13,10 +15,105 @@
     cursor: pointer;
 }
 
+.top-nav__hamburger {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 44px;
+    margin-right: 35px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    user-select: none;
+}
+
+.top-nav__hamburger:focus {
+    outline: none;
+}
+
+.top-nav__hamburger span {
+    position: relative;
+    transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+    transition-duration: 75ms;
+}
+
+.top-nav__hamburger span,
+.top-nav__hamburger span:after,
+.top-nav__hamburger span:before {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #292a2c;
+    border-radius: 4px;
+    transition-property: transform;
+}
+
+.top-nav__hamburger span:after,
+.top-nav__hamburger span:before {
+    content: '';
+    position: absolute;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+}
+
+.top-nav__hamburger span:before {
+    top: -10px;
+    transition: top 75ms ease .12s, opacity 75ms ease;
+}
+
+.top-nav__hamburger span:after {
+    bottom: -10px;
+    transition: bottom 75ms ease .12s, transform 75ms cubic-bezier(.55, .055, .675, .19);
+}
+
+.show-main-nav .top-nav__hamburger span {
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+    transform: rotate(45deg);
+}
+
+.show-main-nav .top-nav__hamburger span:before {
+    top: 0;
+    transition: top 75ms ease, opacity 75ms ease .12s;
+    opacity: 0;
+}
+
+.show-main-nav .top-nav__hamburger span:after {
+    bottom: 0;
+    transition: bottom 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) .12s;
+    transform: rotate(-90deg);
+}
+
 .top-nav__button {
     margin-left: auto;
 }
 
 .top-nav__account {
     margin-left: 37px;
+}
+
+@media (min-width: 576px) and (max-width: 1260px) {
+    .top-nav {
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    .top-nav .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .top-nav {
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.14),
+                    0 4px 5px 0 rgba(0, 0, 0, 0.098),
+                    0 1px 10px 0 rgba(0, 0, 0, 0.084);
+    }
+
+    .top-nav__hamburger {
+        display: flex;
+    }
 }

@@ -6,17 +6,32 @@
     margin-bottom: 60px;
 }
 
+.licenses__list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .licenses__item {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 570px;
+    margin-right: 30px;
     padding: 40px 50px 47px 200px;
     min-height: 315px;
     color: #292828;
     background-color: #ecedee;
     border-radius: 10px;
     box-shadow: 0 3px 1px rgba(37, 130, 221, 0.56);
+}
+
+.licenses__item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.licenses__item:nth-child(n + 3) {
+    margin-top: 30px;
 }
 
 .licenses__item::before {
@@ -61,4 +76,19 @@
 .licenses__link:hover {
     color: #0f66bb;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1260px) {
+    .licenses__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .licenses__item {
+        margin-right: 0;
+    }
+
+    .licenses__item:nth-child(n + 2) {
+        margin-top: 30px;
+    }
 }

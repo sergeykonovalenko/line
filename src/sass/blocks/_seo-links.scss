@@ -1,0 +1,26 @@
+.seo-links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seo-links li {
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.seo-links a {
+    display: block;
+    padding: 7px 23px;
+    line-height: 1;
+    background-color: #1d6bc5;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.seo-links a:hover,
+.seo-links a:focus {
+    background-color: #2591f5;
+}
