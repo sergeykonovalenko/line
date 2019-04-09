@@ -99,3 +99,22 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 496px) {
+    .services__list {
+        display: block;
+        width: 100%;
+    }
+
+    .services__item {
+        margin-right: 0;
+    }
+
+    .services__item:nth-child(n + 2) {
+        margin-top: 2px;
+    }
+
+    .services__link {
+        width: 100%;
+    }
+}

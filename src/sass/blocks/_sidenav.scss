@@ -26,6 +26,13 @@
 
 }
 
+@media screen and (max-width: 576px) {
+    .sidenav {
+        top: 62px;
+        max-height: calc(100% - 62px);
+    }
+}
+
 
 
 

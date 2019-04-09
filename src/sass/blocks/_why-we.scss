@@ -92,3 +92,13 @@
         margin-top: 60px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .why-we__list {
+        width: 100%;
+    }
+
+    .why-we__list li {
+        width: 240px;
+    }
+}

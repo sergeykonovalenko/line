@@ -98,3 +98,26 @@
         width: 330px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .who-chooses-us__lead {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 23px;
+    }
+
+    .who-chooses-us__list ul {
+        display: block;
+    }
+
+    .who-chooses-us__list li,
+    .who-chooses-us__list li:nth-child(2n) {
+        width: 450px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .who-chooses-us__list li:nth-child(n + 2) {
+        margin-top: 35px;
+    }
+} 

@@ -28,7 +28,7 @@ $(document).ready(function () {
         $('body').toggleClass('show-main-nav');
     });
 
-    $('.drawer-backdrop, .top-nav__button').on('click', function () {
+    $('.drawer-backdrop, .top-nav__call-order').on('click', function () {
         $('body').removeClass('show-main-nav');
     });
 

@@ -46,7 +46,7 @@
 }
 
 .licenses__text {
-
+    margin-bottom: 28px;
 }
 
 .licenses__text h3 {
@@ -59,6 +59,14 @@
 .licenses__text p {
     margin: 18px 0;
     line-height: 1.33333em;
+}
+
+.licenses__text *:first-child {
+    margin-top: 0;
+}
+
+.licenses__text *:last-child {
+    margin-bottom: 0;
 }
 
 .licenses__link {
@@ -90,5 +98,17 @@
 
     .licenses__item:nth-child(n + 2) {
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .licenses__item {
+        width: 100%;
+        padding-right: 50px;
+        padding-left: 140px;
+    }
+
+    .licenses__item::before {
+        left: 21px;
     }
 }

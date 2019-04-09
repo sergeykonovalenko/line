@@ -22,7 +22,7 @@
     align-items: center;
     width: 50px;
     height: 44px;
-    margin-right: 35px;
+    margin-right: 25px;
     padding: 10px;
     cursor: pointer;
     background-color: transparent;
@@ -87,8 +87,12 @@
     transform: rotate(-90deg);
 }
 
-.top-nav__button {
+.top-nav__call-order {
     margin-left: auto;
+}
+
+.top-nav__call-order svg {
+    display: none;
 }
 
 .top-nav__account {
@@ -114,5 +118,99 @@
 
     .top-nav__hamburger {
         display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top-nav__call-order {
+        padding: 10px;
+        border: none;
+    }
+
+    .top-nav__call-order::before {
+        display: none;
+    }
+
+    .top-nav__call-order svg {
+        display: block;
+    }
+
+    .top-nav__call-order span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .top-nav__account {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .top-nav {
+        height: 62px;
+    }
+
+    .top-nav__logo {
+        flex-shrink: 0;
+    }
+
+    .top-nav__logo img {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .top-nav [class*='col-']:first-of-type {
+        flex: 0 0 67.333333%;
+        max-width: 67.333333%;
+        padding-right: 0;
+    }
+
+    .top-nav [class*='col-']:last-of-type {
+        flex: 0 0 32.666667%;
+        max-width: 32.666667%;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .top-nav__logo img {
+        width: 155px;
+    }
+
+    .top-nav__hamburger {
+        margin-right: 10px;
+    }
+
+    .top-nav__account {
+        margin-left: 2px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .top-nav__logo img {
+        width: 135px;
+    }
+
+    .top-nav__account {
+        margin-left: 0;
+    }
+
+    .top-nav [class*='col-']:first-of-type {
+        flex: 0 0 65.333333%;
+        max-width: 65.333333%;
+    }
+
+    .top-nav [class*='col-']:last-of-type {
+        flex: 0 0 34.666667%;
+        max-width: 34.666667%;
     }
 }
