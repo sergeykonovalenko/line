@@ -248,3 +248,31 @@
         width: 240px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .connection__list ul {
+        display: block;
+    }
+
+    .connection__list li,
+    .connection__list li:first-child,
+    .connection__list li:last-child,
+    .connection__list li:nth-child(2n) {
+        width: 355px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .connection__list li:nth-child(n + 2) {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .connection__list li,
+    .connection__list li:first-child,
+    .connection__list li:last-child,
+    .connection__list li:nth-child(2n) {
+        width: 100%;
+    }
+}

@@ -102,3 +102,20 @@
         width: 240px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .why-we__list ul {
+        display: block;
+    }
+
+    .why-we__list li,
+    .why-we__list li:nth-child(2n) {
+        width: 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .why-we__list li:nth-child(n + 2) {
+        margin-top: 60px;
+    }
+}

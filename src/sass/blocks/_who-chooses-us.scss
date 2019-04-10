@@ -121,3 +121,22 @@
         margin-top: 35px;
     }
 } 
+
+@media screen and (max-width: 576px) {
+    .who-chooses-us__lead {
+        display: block;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .who-chooses-us__lead::before {
+        margin: 0 auto 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .who-chooses-us__list li,
+    .who-chooses-us__list li:nth-child(2n) {
+        width: 100%;
+    }
+}

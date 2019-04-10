@@ -38,7 +38,7 @@
     color: #69a5dd;
 }
 
-.ticket--has-backup-link .ticket__title p:nth-of-type(2) {
+.ticket__title p:nth-of-type(2) {
     position: absolute;
     left: 0;
     bottom: -20px;
@@ -51,7 +51,6 @@
 
 .ticket__info {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 29px;
 }
 
@@ -118,7 +117,8 @@
     width: 185px;
     height: 174px;
     margin-top: 15px;
-    margin-right: 16px;
+    margin-right: auto;
+    margin-left: auto;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -199,4 +199,42 @@
 
 .ticket__button {
     margin: auto auto 0;
+}
+
+@media screen and (max-width: 992px) {
+    .ticket__title p:nth-of-type(2) {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ticket {
+        width: 100%;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .ticket__speedometer {
+        width: 150px;
+        height: 141px;
+    }
+}
+
+@media screen and (max-width: 357px) {
+    .ticket__description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .ticket__speed-value {
+        font-size: 30px;
+    }
+
+    .ticket__speedometer {
+        width: 140px;
+        height: 132px;
+        margin-top: 12px;
+    }
 }

@@ -20,8 +20,8 @@
     display: none;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 44px;
+    width: 45px;
+    height: 42px;
     margin-right: 25px;
     padding: 10px;
     cursor: pointer;
@@ -44,7 +44,7 @@
 .top-nav__hamburger span:after,
 .top-nav__hamburger span:before {
     display: block;
-    width: 30px;
+    width: 25px;
     height: 4px;
     background-color: #292a2c;
     border-radius: 4px;
@@ -60,12 +60,12 @@
 }
 
 .top-nav__hamburger span:before {
-    top: -10px;
+    top: -9px;
     transition: top 75ms ease .12s, opacity 75ms ease;
 }
 
 .top-nav__hamburger span:after {
-    bottom: -10px;
+    bottom: -9px;
     transition: bottom 75ms ease .12s, transform 75ms cubic-bezier(.55, .055, .675, .19);
 }
 
