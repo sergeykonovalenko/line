@@ -32,7 +32,6 @@ $(document).ready(function () {
         $('body').removeClass('show-main-nav');
     });
 
-
     // animation of tariff cards
     let tickets = document.querySelectorAll('.tariffs__item');
 
