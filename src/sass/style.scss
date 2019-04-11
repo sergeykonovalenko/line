@@ -25,6 +25,7 @@
 @import "blocks/sidenav-social";
 @import "blocks/drawer-backdrop";
 @import "blocks/show-main-nav";
+@import "blocks/offer-common";
 @import "blocks/offer";
 @import "blocks/services";
 @import "blocks/tariffs";
@@ -38,6 +39,16 @@
 @import "blocks/main-footer";
 @import "blocks/social";
 @import "blocks/seo-links";
+/* ==========================================================================
+   INTERNET VPN
+   ========================================================================== */
+@import "blocks/offer-internet-vpn";
+@import "blocks/internet-vpn-body";
+/* ==========================================================================
+   INTERNET
+   ========================================================================== */
+@import "blocks/offer-internet";
+@import "blocks/internet-info";
 /* Modal
    ========================================================================== */
 @import "blocks/modal-common";
@@ -45,10 +56,9 @@
 @import "blocks/form-extra";
 @import "blocks/modal-form";
 @import "blocks/error";
-@import "blocks/modal-content";
 /* Loader
    ========================================================================== */
 @import "blocks/loader";
-/* Thank you page
+/* Modal thanks
    ========================================================================== */
 @import "blocks/modal-thanks";

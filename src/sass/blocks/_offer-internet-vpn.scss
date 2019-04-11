@@ -1,0 +1,15 @@
+.offer-internet-vpn {
+    padding-top: 130px;
+    padding-bottom: 105px;
+    background-color: #0b1865;
+    background-position:  center bottom;
+}
+
+.no-webp .offer-internet-vpn,
+.no-js .offer-internet-vpn {
+    background-image: url("../img/bg/offer-internet.jpg");
+}
+
+.webp .offer-internet-vpn {
+    background-image: url("../img/bg/offer-internet.webp");
+}

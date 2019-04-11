@@ -58,6 +58,10 @@
     opacity: 1;
 }
 
+.sidenav__item--current a {
+    color: #0b79d3;
+}
+
 .sidenav__item a::before {
     content: "";
     display: block;

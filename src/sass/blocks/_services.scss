@@ -41,7 +41,8 @@
 }
 
 .services__link:hover,
-.services__link:focus {
+.services__link:focus,
+.services__link--current {
     color: #21428e;
     text-decoration: none;
     background-color: #fff;
@@ -63,7 +64,8 @@
 }
 
 .services__link:hover svg,
-.services__link:focus svg {
+.services__link:focus svg,
+.services__link--current svg {
     fill: #21428e;
 }
 

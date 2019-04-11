@@ -1,0 +1,95 @@
+.internet-vpn-body {
+    margin-top: -27px;
+    padding-top: 105px;
+    padding-bottom: 85px;
+    background-color: #eef3f9;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.no-js .internet-vpn-body,
+.no-webp .internet-vpn-body {
+    background-image: url("../img/bg/internet-vpn-body.jpg");
+}
+
+.webp .internet-vpn-body {
+    background-image: url("../img/bg/internet-vpn-body.webp");
+}
+
+.internet-vpn-body__title {
+    margin-bottom: 44px;
+}
+
+.internet-vpn-body__list {
+
+}
+
+.internet-vpn-body__list ul {
+    @include reset-list;
+}
+
+.internet-vpn-body__list li {
+    position: relative;
+    font-size: 20px;
+    line-height: 1.45em;
+    margin-bottom: 48px;
+    padding: 44px 35px 35px 200px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(14, 79, 160, 0.3),
+                0 5px 8px rgba(14, 79, 160, 0.3);
+
+}
+
+.internet-vpn-body__list li:last-child {
+    margin-bottom: 0;
+}
+
+.internet-vpn-body__list li::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: block;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+.internet-vpn-body__list li:first-child::before {
+    background-image: url("../img/base/internet-vpn-icon-1.svg");
+}
+
+.internet-vpn-body__list li:last-child::before {
+    background-image: url("../img/base/internet-vpn-icon-2.svg");
+}
+
+.internet-vpn-body__list strong {
+    font-weight: 500;
+    font-size: 30px;
+    color: #21428e;
+}
+
+.internet-vpn-body__list a:last-of-type {
+    display: block;
+    width: 210px;
+    margin-top: 13px;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #fdfeff;
+    padding: 10px;
+    background-color: #2591f5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.internet-vpn-body__list a:last-of-type:hover,
+.internet-vpn-body__list a:last-of-type:focus {
+    text-decoration: none;
+    background-color: #1f6fba;
+}

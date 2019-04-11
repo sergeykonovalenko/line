@@ -1,16 +1,9 @@
 .offer {
     position: relative;
     z-index: 1;
-    margin-top: -70px;
     padding-top: 190px;
     padding-bottom: 165px;
-    color: #fff;
     background-color: #030f5d;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow: hidden;
 }
 
 .no-webp .offer,
@@ -25,13 +18,13 @@
 .offer__title {
     position: relative;
     z-index: 2;
-    text-align: center;
 }
 
 .offer__title h1 {
     font-weight: 400;
     font-size: 30px;
     line-height: 1.2em;
+    text-transform: none;
 }
 
 .offer__title strong {
@@ -53,7 +46,6 @@
 
 @media screen and (max-width: 1260px) {
     .offer {
-        margin-top: 0;
         padding-top: 130px;
     }
 

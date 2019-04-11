@@ -1,0 +1,23 @@
+.offer-common {
+    margin-top: -70px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.offer-common h1 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.3333em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1260px) {
+    .offer-common {
+        margin-top: 0;
+    }
+}

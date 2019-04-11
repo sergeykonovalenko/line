@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     // parallax when moving the mouse
     let scene = document.getElementById('js-scene');
-    let parallax = new Parallax(scene);
+    let parallax = scene ? new Parallax(scene) : '';
 
     // parallax background
     if (!is_mobile) {
@@ -47,6 +47,10 @@ $(document).ready(function () {
         });
     });
 
+    // cancel event when clicking on active menu items
+    $('.current-menu-item, .services__link--current, .sidenav__item--current').on('click', function (e) {
+        e.preventDefault();
+    });
 
     ////////////////////////////////////////////////////////////////////////////
     // FORM PROCESSING

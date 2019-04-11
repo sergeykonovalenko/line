@@ -1,0 +1,15 @@
+.offer-internet {
+    padding-top: 160px;
+    padding-bottom: 125px;
+    background-color: #0b1865;
+    background-position:  center bottom;
+}
+
+.no-webp .offer-internet,
+.no-js .offer-internet {
+    background-image: url("../img/bg/offer-internet.jpg");
+}
+
+.webp .offer-internet {
+    background-image: url("../img/bg/offer-internet.webp");
+}
