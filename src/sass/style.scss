@@ -42,12 +42,13 @@
    ========================================================================== */
 @import "blocks/modal-common";
 @import "blocks/modal-order";
+@import "blocks/form-extra";
 @import "blocks/modal-form";
-@import "blocks/form";
 @import "blocks/error";
+@import "blocks/modal-content";
 /* Loader
    ========================================================================== */
 @import "blocks/loader";
 /* Thank you page
    ========================================================================== */
-@import "blocks/modal-thank-you";
+@import "blocks/modal-thanks";

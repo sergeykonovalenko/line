@@ -26,7 +26,50 @@
 
 }
 
-@media screen and (max-width: 576px) {
+.sidenav__list {
+    @include reset-list;
+}
+
+.sidenav__item {
+
+}
+
+.sidenav__item a {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #212121;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    opacity: 0.67;
+    transition: all 0.3s ease;
+}
+
+.sidenav__item a:hover,
+.sidenav__item a:active,
+.sidenav__item a:focus {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.04);
+    opacity: 1;
+}
+
+.sidenav__item a::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 100%;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 768px) {
     .sidenav {
         top: 62px;
         max-height: calc(100% - 62px);

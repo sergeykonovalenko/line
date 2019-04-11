@@ -3,8 +3,7 @@
 }
 
 .modal-form__list {
-    @include reset-list;
-    margin-bottom: 41px;
+    margin: 0 0 41px 0;
 }
 
 .modal-form__item {
@@ -12,7 +11,7 @@
 }
 
 .modal-form__icon {
-    width: 60px;
+
 }
 
 .modal-form__infix {
@@ -34,4 +33,22 @@
 
 .modal-form__button {
     margin-left: auto;
+}
+
+@media screen and (max-width: 846px) {
+    .modal-form__infix {
+        flex-grow: 1;
+    }
+
+    .modal-form__icon {
+        width: 40px;
+    }
+
+    .modal-form__icon svg {
+        width: 20px;
+    }
+
+    .modal-form__field {
+        width: 100%;
+    }
 }

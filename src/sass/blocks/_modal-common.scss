@@ -2,6 +2,11 @@
 
 }
 
+.modal-common .modal-content {
+    border: none;
+    border-radius: 10px;
+}
+
 .modal-common__close {
     position: absolute;
     top: -9px;

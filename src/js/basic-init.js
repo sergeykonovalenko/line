@@ -25,11 +25,11 @@ $(document).ready(function () {
 
     // show/hide mobile menu
     $('.top-nav__hamburger').on('click', function () {
-        $('body').toggleClass('show-main-nav');
+        $('html').toggleClass('show-main-nav');
     });
 
     $('.drawer-backdrop, .top-nav__call-order').on('click', function () {
-        $('body').removeClass('show-main-nav');
+        $('html').removeClass('show-main-nav');
     });
 
     // animation of tariff cards
@@ -84,43 +84,42 @@ $(document).ready(function () {
                 }
 
                 if ( requiredInput.classList.contains('valid') ) {
-                    requiredInput.closest('.form__item').classList.remove('form__item--invalid');
+                    requiredInput.closest('.form-extra__item').classList.remove('form-extra__item--invalid');
                 }
 
                 if ( requiredInput.classList.contains('error') ) {
-                    requiredInput.closest('.form__item').classList.add('form__item--invalid');
+                    requiredInput.closest('.form-extra__item').classList.add('form-extra__item--invalid');
                 }
             }, 50);
         });
     });
 
     // tracking and removing focus
-    let formFields = document.querySelectorAll('.form__field');
+    let formFields = document.querySelectorAll('.form-extra__field');
 
     formFields.forEach(function (formField) {
 
         formField.addEventListener('focus', function () {
-            let formItem = this.closest('.form__item');
-            formItem.classList.add('form__item--focused', 'form__item--should-float');
+            let formItem = this.closest('.form-extra__item');
+            formItem.classList.add('form-extra__item--focused', 'form-extra__item--should-float');
         });
 
         formField.addEventListener('blur', function () {
-            let formItem = this.closest('.form__item');
-            formItem.classList.remove('form__item--focused');
+            let formItem = this.closest('.form-extra__item');
+            formItem.classList.remove('form-extra__item--focused');
 
             if ( !formField.classList.contains('error') && formField.value === '') {
-                formItem.classList.remove('form__item--should-float');
+                formItem.classList.remove('form-extra__item--should-float');
             }
 
             if ( formField.classList.contains('error') ) {
-                formItem.classList.add('form__item--invalid');
+                formItem.classList.add('form-extra__item--invalid');
             }
         });
     });
 
     // focus and disabling validation when closing a modal
     let modalOrder = $('#js-modal-order');
-    let validator;
 
     modalOrder.on('shown.bs.modal', function () {
         $('#modal-form-phone').trigger('focus');
@@ -129,8 +128,6 @@ $(document).ready(function () {
     modalOrder.on('hidden.bs.modal', function () {
         modalOrder.find('button[data-submit]').attr('disabled', 'disabled');
         modalOrder.find('input').val('');
-        // $(this).find('.form__item').removeClass('form__item--invalid');
-        // validator.destroy();
     });
 
     // form submission
@@ -149,7 +146,7 @@ $(document).ready(function () {
     );
 
     function valEl(el) {
-        validator = el.validate({
+        let validator = el.validate({
             rules:{
                 phone:{
                     required:true,
@@ -169,6 +166,7 @@ $(document).ready(function () {
                 }
             },
             submitHandler: function (form) {
+                $('.modal-order').modal('hide');
                 $('.loader').fadeIn();
                 var $form = $(form);
                 var $formId = $(form).attr('data-id');
@@ -179,19 +177,18 @@ $(document).ready(function () {
                     data: $form.serialize(),
                 })
                     .always(function (response) {
-                        setTimeout(function (){
+                        setTimeout(function () {
                             $('.loader').fadeOut();
-                            $('.modal-order').modal('hide');
-                        },10);
-                        setTimeout(function (){
-                            $('.modal-thank-you').modal('show');
+                        },800);
+                        setTimeout(function () {
+                            $('.modal-thanks').modal('show');
                             $form.trigger('reset');
                         },1100);
                     });
 
                 return false;
             }
-        })
+        });
     }
 
     $('.js-form').each(function() {
@@ -199,6 +196,7 @@ $(document).ready(function () {
     });
 
     ////////////////////////////////////////////////////////////////////////////
+
 
     function isMobile() {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));

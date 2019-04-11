@@ -1,35 +1,40 @@
-.form {
+.form-extra {
 
 }
 
-.form__item {
+.form-extra__list {
+    padding: 0;
+    list-style: none;
+}
+
+.form-extra__item {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     margin-bottom: 35px;
 }
 
-.form__item:last-child {
+.form-extra__item:last-child {
     margin-bottom: 0;
 }
 
-.form__icon {
-
+.form-extra__icon {
+    width: 50px;
 }
 
-.form__icon path {
+.form-extra__icon path {
     transition: fill 0.4s ease;
 }
 
-.form__item--focused .form__icon svg {
+.form-extra__item--focused .form-extra__icon svg {
     fill: #42a1fa;
 }
 
-.form__item--invalid .form__icon svg {
+.form-extra__item--invalid .form-extra__icon svg {
     fill: #fb5258;
 }
 
-.form__infix {
+.form-extra__infix {
     position: relative;
     padding: 0.4375em 0;
     font-size: 16px;
@@ -38,25 +43,25 @@
 }
 
 
-.form__infix::before,
-.form__infix::after {
+.form-extra__infix::before,
+.form-extra__infix::after {
     content: '';
     position: absolute;
     left: 0;
     width: 100%;
 }
 
-.form__infix::before {
+.form-extra__infix::before {
     bottom: -1px;
     height: 1px;
     background-color: #aeafaf;
 }
 
-.form__item--invalid .form__infix::before {
+.form-extra__item--invalid .form-extra__infix::before {
     background-color: #fb5258;
 }
 
-.form__infix::after {
+.form-extra__infix::after {
     bottom: -2px;
     height: 2px;
     background-color: #42a1fa;
@@ -66,11 +71,11 @@
     opacity: 0;
 }
 
-.form__item--invalid .form__infix::after {
+.form-extra__item--invalid .form-extra__infix::after {
     background-color: #fb5258;
 }
 
-.form__item--focused .form__infix::after {
+.form-extra__item--focused .form-extra__infix::after {
     opacity: 1;
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
                 opacity 0.1s cubic-bezier(0.25, 0.8, 0.25, 1),
@@ -78,11 +83,11 @@
     transform: scaleX(1);
 }
 
-.form__field {
+.form-extra__field {
     caret-color: #42a1fa;
 }
 
-.form__label-wrapper {
+.form-extra__label-wrapper {
     position: absolute;
     top: -0.84375em;
     box-sizing: content-box;
@@ -95,7 +100,7 @@
     overflow: hidden;
 }
 
-.form__label {
+.form-extra__label {
     position: absolute;
     top: 1.28125em;
     left: 0;
@@ -114,14 +119,14 @@
     overflow: hidden;
 }
 
-.form__item--focused .form__label {
+.form-extra__item--focused .form-extra__label {
     color: #42a1fa;
 }
 
-.form__item--invalid .form__label {
+.form-extra__item--invalid .form-extra__label {
     color: #fb5258;
 }
 
-.form__item--should-float .form__label {
+.form-extra__item--should-float .form-extra__label {
     transform: translateY(-1.34375em) scale(.75);
 }
