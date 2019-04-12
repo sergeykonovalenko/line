@@ -187,6 +187,7 @@ $(document).ready(function () {
                         setTimeout(function () {
                             $('.modal-thanks').modal('show');
                             $form.trigger('reset');
+                            $('.form-extra__item').removeClass('form-extra__item--should-float');
                         },1100);
                     });
 
