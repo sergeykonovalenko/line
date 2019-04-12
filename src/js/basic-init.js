@@ -63,71 +63,56 @@ $(document).ready(function () {
         }
     });
 
+    let formExtraFields = $('.form-extra__field');
+
     // input event tracking
+    formExtraFields.on('input, keyup', function () {
 
-    $('input').on('input, keyup', function () {
-        console.log(555);
-        console.log( $(this).valid() );
-    });
+        let form = $(this).closest('form');
+        let inputTargeted = form.find('input');
+        let buttonSubmit = $(this).closest('form').find('.modal-form__button');
 
-    let requiredInputAll = document.querySelectorAll('.required');
+        if ( form.valid() ) {
+            buttonSubmit.removeAttr('disabled');
+        } else {
+            buttonSubmit.attr('disabled', 'disabled');
+        }
 
-    requiredInputAll.forEach(function (requiredInput) {
+        inputTargeted.each(function () {
+            let formExtraItem = $(this).closest('.form-extra__item');
 
-        requiredInput.addEventListener('keyup', function () {
-
-            let form = requiredInput.closest('form');
-            let requiredInputTargeted = form.querySelectorAll('.required');
-            let buttonSubmit = form.querySelector('button[data-submit]');
-            let validationState = true;
-            let inputPhone = form.querySelector('input[type="tel"]');
-            let phoneMaskState = inputPhone.classList.contains('mask-filled');
-
-            setTimeout(function () {
-                requiredInputTargeted.forEach(function (requiredInputTargetedItem) {
-                    if (requiredInputTargetedItem.classList.contains('error')) {
-                        validationState = false;
-                    }
-                });
-
-                if (validationState && phoneMaskState) {
-                    buttonSubmit.removeAttribute('disabled');
-                }
-
-                if ( requiredInput.classList.contains('valid') ) {
-                    requiredInput.closest('.form-extra__item').classList.remove('form-extra__item--invalid');
-                }
-
-                if ( requiredInput.classList.contains('error') ) {
-                    requiredInput.closest('.form-extra__item').classList.add('form-extra__item--invalid');
-                }
-            }, 50);
+            if ( $(this).valid() ) {
+                formExtraItem.removeClass('form-extra__item--invalid');
+            } else {
+                formExtraItem.addClass('form-extra__item--invalid');
+            }
         });
     });
-
 
     // tracking and removing focus
-    let formFields = document.querySelectorAll('.form-extra__field');
+    formExtraFields.on('focus', function () {
+        let formExtraItem = $(this).closest('.form-extra__item');
 
-    formFields.forEach(function (formField) {
+        formExtraItem.addClass('form-extra__item--focused form-extra__item--should-float');
 
-        formField.addEventListener('focus', function () {
-            let formItem = this.closest('.form-extra__item');
-            formItem.classList.add('form-extra__item--focused', 'form-extra__item--should-float');
-        });
+        if ( !$(this).valid() ) {
+            formExtraItem.addClass('form-extra__item--invalid');
+        }
+    });
 
-        formField.addEventListener('blur', function () {
-            let formItem = this.closest('.form-extra__item');
-            formItem.classList.remove('form-extra__item--focused');
+    formExtraFields.on('blur', function () {
+        let formExtraItem = $(this).closest('.form-extra__item');
 
-            if ( !formField.classList.contains('error') && formField.value === '') {
-                formItem.classList.remove('form-extra__item--should-float');
-            }
+        formExtraItem.removeClass('form-extra__item--focused');
 
-            if ( formField.classList.contains('error') ) {
-                formItem.classList.add('form-extra__item--invalid');
-            }
-        });
+        if ( $(this).valid() && $(this).val() === '' ) {
+            formExtraItem.removeClass('form-extra__item--should-float');
+        }
+
+        if ( !$(this).valid() ) {
+            formExtraItem.addClass('form-extra__item--invalid');
+        }
+
     });
 
     // focus and disabling validation when closing a modal
@@ -138,7 +123,7 @@ $(document).ready(function () {
     });
 
     modalOrder.on('hidden.bs.modal', function () {
-        modalOrder.find('button[data-submit]').attr('disabled', 'disabled');
+        modalOrder.find('.modal-form__button').attr('disabled', 'disabled');
         modalOrder.find('input').val('');
     });
 
@@ -151,14 +136,14 @@ $(document).ready(function () {
     $.validator.addMethod(
         "regex",
         function(value, element, regexp) {
-            var re = new RegExp(regexp);
+            let re = new RegExp(regexp);
             return this.optional(element) || re.test(value);
         },
         "Пожалуйста, проверьте свои данные"
     );
 
     function valEl(el) {
-        let validator = el.validate({
+         let validator = el.validate({
             rules:{
                 phone:{
                     required:true,
