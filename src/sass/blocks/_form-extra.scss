@@ -27,10 +27,10 @@
 }
 
 .form-extra__item--focused .form-extra__icon svg {
-    fill: #42a1fa;
+    fill: #2e2c2c;
 }
 
-.form-extra__item--invalid .form-extra__icon svg {
+.form-extra__item.form-extra__item--invalid .form-extra__icon svg {
     fill: #fb5258;
 }
 
@@ -57,21 +57,21 @@
     background-color: #aeafaf;
 }
 
-.form-extra__item--invalid .form-extra__infix::before {
+.form-extra__item.form-extra__item--invalid .form-extra__infix::before {
     background-color: #fb5258;
 }
 
 .form-extra__infix::after {
     bottom: -2px;
     height: 2px;
-    background-color: #42a1fa;
+    background-color: #2e2c2c;
     transition: background-color 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
     transform-origin: 50%;
     transform: scaleX(0.5);
     opacity: 0;
 }
 
-.form-extra__item--invalid .form-extra__infix::after {
+.form-extra__item.form-extra__item--invalid .form-extra__infix::after {
     background-color: #fb5258;
 }
 
@@ -85,6 +85,8 @@
 
 .form-extra__field {
     caret-color: #42a1fa;
+    border: none;
+    background-color: transparent;
 }
 
 .form-extra__label-wrapper {
@@ -120,10 +122,10 @@
 }
 
 .form-extra__item--focused .form-extra__label {
-    color: #42a1fa;
+    color: #2e2c2c;
 }
 
-.form-extra__item--invalid .form-extra__label {
+.form-extra__item.form-extra__item--invalid .form-extra__label {
     color: #fb5258;
 }
 

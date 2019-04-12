@@ -14,13 +14,20 @@
 
 }
 
+.form-extra__item--focused .modal-form__icon svg {
+    fill: #42a1fa;
+}
+
 .modal-form__infix {
 
 }
 
+.modal-form__infix::after {
+    background-color: #42a1fa;
+}
+
 .modal-form__field {
     width: 500px;
-    border: none;
 }
 
 .modal-form__label-wrapper {
@@ -29,6 +36,10 @@
 
 .modal-form__label {
 
+}
+
+.form-extra__item--focused .modal-form__label {
+    color: #42a1fa;
 }
 
 .modal-form__button {

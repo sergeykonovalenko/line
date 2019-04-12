@@ -64,9 +64,16 @@ $(document).ready(function () {
     });
 
     // input event tracking
+
+    $('input').on('input, keyup', function () {
+        console.log(555);
+        console.log( $(this).valid() );
+    });
+
     let requiredInputAll = document.querySelectorAll('.required');
 
     requiredInputAll.forEach(function (requiredInput) {
+
         requiredInput.addEventListener('keyup', function () {
 
             let form = requiredInput.closest('form');
@@ -97,6 +104,7 @@ $(document).ready(function () {
             }, 50);
         });
     });
+
 
     // tracking and removing focus
     let formFields = document.querySelectorAll('.form-extra__field');
@@ -158,6 +166,9 @@ $(document).ready(function () {
                 },
                 name:{
                     required:false
+                },
+                email:{
+                    required:false
                 }
             },
             messages:{
@@ -167,6 +178,10 @@ $(document).ready(function () {
                 },
                 name:{
                     required:'Поле обязательно для заполнения'
+                },
+                email:{
+                    required:'Поле обязательно для заполнения',
+                    email:'Неправильный формат email'
                 }
             },
             submitHandler: function (form) {

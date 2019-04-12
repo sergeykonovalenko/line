@@ -1,0 +1,33 @@
+.internet-order {
+    padding-top: 75px;
+    padding-bottom: 80px;
+    background-color: #edf3f8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.no-js .internet-order,
+.no-webp .internet-order {
+    background-image: url("../img/bg/internet-order.jpg");
+}
+
+.webp .internet-order {
+    background-image: url("../img/bg/internet-order.webp");
+}
+
+.internet-order__title {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.33333em;
+    text-align: center;
+}
+
+.internet-order__request {
+
+}
+
+.internet-order__advantages {
+
+}

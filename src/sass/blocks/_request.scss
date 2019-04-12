@@ -1,0 +1,77 @@
+.request {
+    padding: 36px 24px 50px;
+    background-color: #fbfbfb;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(14, 79, 160, 0.3),
+                0 5px 8px rgba(14, 79, 160, 0.3);
+}
+
+.no-js .request,
+.no-webp .request {
+    background-image: url("../img/bg/request.jpg");
+}
+
+.webp .request {
+    background-image: url("../img/bg/request.webp");
+}
+
+.request__title {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.request__title strong {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.28571em;
+    color: #102542;
+}
+
+.request__title p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.5em;
+    margin-bottom: 0;
+}
+
+.request__form {
+    width: 385px;
+    margin: 0 auto;
+}
+
+.request__list {
+    margin-bottom: 55px;
+}
+
+.request__item {
+
+}
+
+.request__icon {
+
+}
+
+.request__infix {
+    flex-grow: 1;
+}
+
+.request__field {
+
+}
+
+.request__label-wrapper {
+
+}
+
+.request__label {
+
+}
+
+.request__button {
+    width: 100%;
+}
