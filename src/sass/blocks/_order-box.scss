@@ -1,0 +1,113 @@
+.order-box {
+    padding-top: 70px;
+    padding-bottom: 85px;
+}
+
+.order-box__info {
+    width: 1090px;
+    margin: 0 auto 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5em;
+    text-align: center;
+    color: #494848;
+}
+
+.order-box__form-wrapper {
+    width: 1090px;
+    margin: 0 auto;
+    padding: 40px 15px 55px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(14, 79, 160, 0.3),
+                0 5px 8px rgba(14, 79, 160, 0.3);
+}
+
+.no-js .order-box__form-wrapper,
+.no-webp .order-box__form-wrapper {
+    background: url("../img/bg/order-box-form.jpg");
+}
+
+.webp .order-box__form-wrapper {
+    background: url("../img/bg/order-box-form.webp");
+}
+
+.order-box__lead {
+    margin-bottom: 35px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2em;
+    text-align: center;
+    color: #494848;
+}
+
+.order-box__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order-box__list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-box__item {
+    position: relative;
+    margin-right: 35px;
+    padding-left: 41px;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+.order-box__item:last-child {
+    margin-right: 0;
+}
+
+.order-box__item:nth-child(1) {
+    background-image: url("../img/base/order-box-name.svg");
+    background-size: 24px 24px;
+}
+
+.order-box__item:nth-child(2) {
+    background-image: url("../img/base/order-box-phone.svg");
+    background-size: 24px 24px;
+}
+
+.order-box__item:nth-child(3) {
+    background-image: url("../img/base/order-box-mail.svg");
+    background-size: 25px 19px;
+}
+
+.order-box label.error {
+    left: 41px;
+}
+
+.order-box__label {
+
+}
+
+.order-box__field {
+    width: 205px;
+    height: 38px;
+    padding: 0 13px;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    line-height: 38;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+}
+
+.order-box__field::placeholder {
+    color: #9a9a9a;
+}
+
+.order-box__button {
+    width: 155px;
+    height: 38px;
+    margin-left: 31px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 38px;
+}

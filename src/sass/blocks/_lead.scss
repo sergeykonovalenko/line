@@ -1,0 +1,39 @@
+.lead {
+    display: flex;
+    align-items: center;
+    padding: 27px 47px 32px;
+    font-size: 30px;
+    line-height: 1.3333em;
+    color: #fff;
+    background-color: #1e3e89;
+}
+
+.lead::before {
+    content: '';
+    flex-shrink: 0;
+    display: block;
+    margin-right: 47px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .lead {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .lead {
+        display: block;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .lead::before {
+        margin: 0 auto 10px;
+    }
+}

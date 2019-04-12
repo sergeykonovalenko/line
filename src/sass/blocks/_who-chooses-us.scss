@@ -21,25 +21,13 @@
 }
 
 .who-chooses-us__lead {
-    display: flex;
-    align-items: center;
     margin-bottom: 45px;
-    padding: 27px 47px 32px;
-    font-size: 30px;
-    line-height: 1.3333em;
-    color: #fff;
-    background-color: #1e3e89;
 }
 
 .who-chooses-us__lead::before {
-    content: '';
-    flex-shrink: 0;
-    display: block;
     width: 75px;
     height: 75px;
-    margin-right: 42px;
-    background: url("../img/base/wifi.svg") no-repeat 0 0;
-    background-size: contain;
+    background-image: url("../img/base/wifi.svg");
 }
 
 .who-chooses-us__list {
@@ -100,12 +88,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .who-chooses-us__lead {
-        padding-left: 25px;
-        padding-right: 25px;
-        font-size: 23px;
-    }
-
     .who-chooses-us__list ul {
         display: block;
     }
@@ -121,18 +103,6 @@
         margin-top: 35px;
     }
 } 
-
-@media screen and (max-width: 576px) {
-    .who-chooses-us__lead {
-        display: block;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    .who-chooses-us__lead::before {
-        margin: 0 auto 10px;
-    }
-}
 
 @media screen and (max-width: 480px) {
     .who-chooses-us__list li,

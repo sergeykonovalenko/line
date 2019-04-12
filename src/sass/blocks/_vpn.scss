@@ -1,0 +1,66 @@
+.vpn {
+    padding-top: 80px;
+}
+
+.vpn__info {
+
+}
+
+.vpn__advantages {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    font-size: 24px;
+    line-height: 1.25em;
+}
+
+.vpn__advantages p:first-child {
+    margin-bottom: 30px;
+    padding-left: 55px;
+    font-weight: 500;
+}
+
+.vpn__advantages ul {
+    @include reset-list;
+}
+
+.vpn__advantages li {
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 55px;
+}
+
+.vpn__advantages li:last-child {
+    margin-bottom: 0;
+}
+
+.vpn__advantages li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background: url("../img/base/check-mark.svg") no-repeat 0 0;
+    transform: translate(0, -50%);
+}
+
+.vpn__advantages *:first-child {
+    margin-top: 0;
+}
+
+.vpn__advantages *:last-child {
+    margin-bottom: 0;
+}
+
+.vpn__lead {
+    margin-bottom: 0;
+}
+
+.vpn__lead::before {
+    width: 68px;
+    height: 68px;
+    background-image: url("../img/base/vpn.svg");
+}
+

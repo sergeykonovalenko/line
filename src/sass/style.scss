@@ -32,6 +32,7 @@
 @import "blocks/section-title";
 @import "blocks/ticket";
 @import "blocks/who-chooses-us";
+@import "blocks/lead";
 @import "blocks/why-we";
 @import "blocks/connection";
 @import "blocks/licenses";
@@ -48,9 +49,17 @@
    INTERNET
    ========================================================================== */
 @import "blocks/offer-internet";
+@import "blocks/content";
 @import "blocks/internet-info";
 @import "blocks/internet-order";
 @import "blocks/request";
+/* ==========================================================================
+   VPN
+   ========================================================================== */
+@import "blocks/offer-vpn";
+@import "blocks/vpn";
+@import "blocks/order-box";
+@import "blocks/vpn-order";
 /* Modal
    ========================================================================== */
 @import "blocks/modal-common";

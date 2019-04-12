@@ -94,9 +94,11 @@ $(document).ready(function () {
         let formExtraItem = $(this).closest('.form-extra__item');
 
         formExtraItem.addClass('form-extra__item--focused form-extra__item--should-float');
+    });
 
+    $('.request__field').on('focus', function () {
         if ( !$(this).valid() ) {
-            formExtraItem.addClass('form-extra__item--invalid');
+            $(this).closest('.form-extra__item').addClass('form-extra__item--invalid');
         }
     });
 

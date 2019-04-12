@@ -140,7 +140,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('refresh', function (done) {
-    // server.reload();
+    server.reload();
     done();
 });
 
