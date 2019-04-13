@@ -1,0 +1,62 @@
+.sms-authorization {
+    padding-top: 80px;
+    padding-bottom: 85px;
+}
+
+.sms-authorization__info {
+
+}
+
+.sms-authorization__advantages {
+
+}
+
+.sms-authorization__advantages h2 {
+    margin-top: 68px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.3333em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #252526;
+}
+
+.sms-authorization__advantages ul {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sms-authorization__advantages li {
+    width: 295px;
+    padding-top: 83px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.2em;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 66px 66px;
+}
+
+.sms-authorization__advantages li:nth-child(1) {
+    background-image: url("../img/base/sms-authorization-advantages-icon-1.svg");
+}
+
+.sms-authorization__advantages li:nth-child(2) {
+    background-image: url("../img/base/sms-authorization-advantages-icon-2.svg");
+}
+
+.sms-authorization__advantages li:nth-child(3) {
+    background-image: url("../img/base/sms-authorization-advantages-icon-3.svg");
+}
+
+.sms-authorization__advantages strong {
+    display: block;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.25em;
+}

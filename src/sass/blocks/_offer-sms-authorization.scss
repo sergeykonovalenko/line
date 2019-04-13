@@ -1,0 +1,16 @@
+.offer-sms-authorization {
+    padding-top: 160px;
+    padding-bottom: 125px;
+    background-color: #13125f;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.no-webp .offer-sms-authorization,
+.no-js .offer-sms-authorization {
+    background-image: url("../img/bg/offer-sms-authorization.jpg");
+}
+
+.webp .offer-sms-authorization {
+    background-image: url("../img/bg/offer-sms-authorization.webp");
+}

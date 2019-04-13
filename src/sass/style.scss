@@ -65,6 +65,12 @@
    ========================================================================== */
 @import "blocks/offer-network";
 @import "blocks/network";
+/* ==========================================================================
+   SMS-AUTHORIZATION
+   ========================================================================== */
+@import "blocks/offer-sms-authorization";
+@import "blocks/sms-authorization";
+@import "blocks/sms-authorization-order";
 /* Modal
    ========================================================================== */
 @import "blocks/modal-common";
