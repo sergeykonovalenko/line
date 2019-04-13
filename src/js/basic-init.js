@@ -48,7 +48,7 @@ $(document).ready(function () {
     });
 
     // cancel event when clicking on active menu items
-    $('.current-menu-item, .services__link--current, .sidenav__item--current').on('click', function (e) {
+    $('.current-menu-item a, .services__item--current a, .sidenav__item--current a').on('click', function (e) {
         e.preventDefault();
     });
 

@@ -1,6 +1,18 @@
 .order-box {
     padding-top: 70px;
     padding-bottom: 85px;
+    background-color: #eaf0fe;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.no-webp .order-box,
+.no-js .order-box {
+    background-image: url("../img/bg/order-box.jpg");
+}
+
+.webp .order-box {
+    background-image: url("../img/bg/order-box.webp");
 }
 
 .order-box__info {
