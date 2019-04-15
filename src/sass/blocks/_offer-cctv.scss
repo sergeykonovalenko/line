@@ -1,0 +1,14 @@
+.offer-cctv {
+    padding-top: 160px;
+    padding-bottom: 125px;
+    background-color: #0d0b6c;
+}
+
+.no-webp .offer-cctv,
+.no-js .offer-cctv {
+    background-image: url("../img/bg/offer-cctv.jpg");
+}
+
+.webp .offer-cctv {
+    background-image: url("../img/bg/offer-cctv.webp");
+}

@@ -1,12 +1,13 @@
-.vpn {
+.cctv {
     padding-top: 80px;
+    padding-bottom: 85px;
 }
 
-.vpn__info {
-
+.cctv__info p:last-of-type {
+    color: #21428e;
 }
 
-.vpn__advantages {
+.cctv__installation-steps {
     width: 960px;
     margin: 0 auto;
     padding-top: 70px;
@@ -15,53 +16,44 @@
     line-height: 1.25em;
 }
 
-.vpn__advantages h3 {
+.cctv__installation-steps h3 {
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 24px;
     text-align: center;
 }
 
-.vpn__advantages ul {
+.cctv__installation-steps ul {
     @include reset-list;
 }
 
-.vpn__advantages li {
+.cctv__installation-steps li {
     position: relative;
     margin-bottom: 24px;
     padding-left: 55px;
 }
 
-.vpn__advantages li:last-child {
+.cctv__installation-steps li:last-child {
     margin-bottom: 0;
 }
 
-.vpn__advantages li::before {
+.cctv__installation-steps li::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 0;
     width: 28px;
     height: 28px;
-    background: url("../img/base/check-mark.svg") no-repeat 0 0;
+    background: url(../img/base/check-mark.svg) no-repeat 0 0;
     transform: translate(0, -50%);
 }
 
-.vpn__advantages *:first-child {
-    margin-top: 0;
-}
-
-.vpn__advantages *:last-child {
+.cctv__lead {
     margin-bottom: 0;
 }
 
-.vpn__lead {
-    margin-bottom: 0;
-}
-
-.vpn__lead::before {
+.cctv__lead::before {
     width: 68px;
-    height: 68px;
-    background-image: url("../img/base/vpn.svg");
+    height: 64px;
+    background-image: url("../img/base/cctv-white.svg");
 }
-
