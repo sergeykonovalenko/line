@@ -1,0 +1,55 @@
+.cellular-enhancement-advantages {
+    padding-bottom: 85px;
+}
+
+.cellular-enhancement-advantages h2 {
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.3333em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #252526;
+}
+
+.cellular-enhancement-advantages ul {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cellular-enhancement-advantages li {
+    width: 210px;
+    padding-top: 85px;
+    font-size: 24px;
+    line-height: 1.25em;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.cellular-enhancement-advantages li:nth-child(1) {
+    background-image: url("../img/base/cellular-enhancement-advantages-icon-1.svg");
+    background-size: 56px 60px;
+}
+
+.cellular-enhancement-advantages li:nth-child(2) {
+    background-image: url("../img/base/cellular-enhancement-advantages-icon-2.svg");
+    background-size: 70px 60px;
+}
+
+.cellular-enhancement-advantages li:nth-child(3) {
+    background-image: url("../img/base/cellular-enhancement-advantages-icon-3.svg");
+    background-size: 63px 63px;
+}
+
+.cellular-enhancement-advantages li:nth-child(4) {
+    background-image: url("../img/base/cellular-enhancement-advantages-icon-4.svg");
+    background-size: 61px 61px;
+}
+
+.cellular-enhancement-advantages li:nth-child(5) {
+    background-image: url("../img/base/cellular-enhancement-advantages-icon-5.svg");
+    background-size: 44px 62px;
+}
