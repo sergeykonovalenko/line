@@ -6,6 +6,22 @@
     background-color: rgba(3, 111, 212, 0.21);
 }
 
+.main-nav--services-page {
+    background-color: #0e2d87;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.no-js .main-nav--services-page,
+.no-webp .main-nav--services-page {
+    background-image: url("../img/bg/main-nav-services-page.jpg");
+}
+
+.webp .main-nav--services-page {
+    background-image: url("../img/bg/main-nav-services-page.webp");
+}
+
 .main-nav__list {
     @include reset-list;
     display: flex;

@@ -9,7 +9,7 @@
     white-space: normal;
     word-wrap: normal;
     border: 0;
-    border-radius: 5px;
+    border-radius: 4px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -60,6 +60,20 @@
     transform: translate3d(0, 100%, 0);
 }
 
+.button--rayen-red {
+    color: #f46967;
+    border-radius: 4px;
+    border-color: #f46967;
+}
+
+.button--rayen-red:hover {
+    border-color: #f46967;
+}
+
+.button--rayen-red::before {
+    background: #f46967;
+}
+
 .button--actions {
     display: block;
     width: 150px;
@@ -72,8 +86,7 @@
     box-shadow: 0 3px 5px rgba(155, 29, 29, 0.8);
 }
 
-.button--actions:hover,
-.button--actions:focus {
+.button--actions:hover {
     color: #fff;
     text-decoration: none;
     background: #c33f3a;
