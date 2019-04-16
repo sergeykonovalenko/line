@@ -1,0 +1,20 @@
+.offer-about {
+    padding-top: 115px;
+    padding-bottom: 100px;
+    background-color: #0e0f56;
+}
+
+.no-webp .offer-about,
+.no-js .offer-about {
+    background-image: url("../img/bg/offer-about.jpg");
+}
+
+.webp .offer-about {
+    background-image: url("../img/bg/offer-about.webp");
+}
+
+.offer-about h1 {
+    font-weight: 400;
+    line-height: 1.2em;
+    text-transform: none;
+}
