@@ -108,6 +108,11 @@
     line-height: 38;
     border-radius: 4px;
     background-color: #e6e6e6;
+    transition: all 0.3s ease;
+}
+
+.order-box__field:focus {
+    box-shadow: 0 0 5px rgba(218, 218, 218, 1);
 }
 
 .order-box__field::placeholder {

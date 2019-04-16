@@ -1,0 +1,20 @@
+.offer-connection-request {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    background-color: #151872;
+}
+
+.no-webp .offer-connection-request,
+.no-js .offer-connection-request {
+    background-image: url("../img/bg/offer-connection-request.jpg");
+}
+
+.webp .offer-connection-request {
+    background-image: url("../img/bg/offer-connection-request.webp");
+}
+
+.offer-connection-request h1 {
+    font-weight: 400;
+    line-height: 1.2em;
+    text-transform: none;
+}

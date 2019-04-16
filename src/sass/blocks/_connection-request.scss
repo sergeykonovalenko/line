@@ -1,0 +1,31 @@
+.connection-request {
+    padding: 110px 0;
+    background-color: #e7eef8;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.no-js .connection-request,
+.no-webp .connection-request {
+    background-image: url("../img/bg/connection-request.jpg");
+}
+
+.webp .connection-request {
+    background-image: url("../img/bg/connection-request.webp");
+}
+
+.connection-request__box {
+    padding: 50px 15px 60px;
+    background-color: #fff;
+    box-shadow: 0 6px 9px rgba(14, 79, 160, 0.08);
+}
+
+.connection-request__title {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.25em;
+    text-align: center;
+    color: #102542;
+}
