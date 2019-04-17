@@ -12,7 +12,7 @@
 }
 
 .sms-authorization__advantages h2 {
-    margin-top: 68px;
+    margin-top: 70px;
     margin-bottom: 50px;
     font-weight: 500;
     font-size: 30px;
@@ -31,7 +31,7 @@
 
 .sms-authorization__advantages li {
     width: 295px;
-    padding-top: 83px;
+    padding-top: 90px;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.2em;
@@ -55,8 +55,45 @@
 
 .sms-authorization__advantages strong {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.25em;
+}
+
+@media screen and (max-width: 1260px) {
+    .sms-authorization__advantages li {
+        width: 285px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sms-authorization__advantages li {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sms-authorization__advantages h2 {
+        margin-bottom: 62px;
+    }
+
+    .sms-authorization__advantages ul {
+        display: block;
+    }
+
+    .sms-authorization__advantages li {
+        width: 295px;
+        margin: 0 auto 65px;
+    }
+
+    .sms-authorization__advantages li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .sms-authorization__advantages li {
+        width: 100%;
+    }
 }

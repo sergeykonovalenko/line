@@ -13,25 +13,30 @@
     color: #252526;
 }
 
-.cellular-enhancement__problems {
+.cellular-enhancement-info__problems {
     font-size: 24px;
 }
 
-.cellular-enhancement__problems ul {
+.cellular-enhancement-info__problems ul {
     @include reset-list;
     padding-left: 70px;
 }
 
-.cellular-enhancement__problems li {
+.cellular-enhancement-info__problems li {
     position: relative;
+    margin-bottom: 6px;
     padding-left: 35px;
-    line-height: 1.5em;
+    line-height: 1.2em;
 }
 
-.cellular-enhancement__problems li::before {
+.cellular-enhancement-info__problems li:last-child {
+    margin-bottom: 0;
+}
+
+.cellular-enhancement-info__problems li::before {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 4px;
     left: 0;
     width: 22px;
     height: 22px;
@@ -39,52 +44,52 @@
     background-size: contain;
 }
 
-.cellular-enhancement__explanation {
+.cellular-enhancement-info__explanation {
     padding-right: 70px;
     font-size: 24px;
     line-height: 1.25em;
 }
 
-.cellular-enhancement__explanation p {
+.cellular-enhancement-info__explanation p {
     margin-bottom: 0;
 }
 
-.cellular-enhancement__lead {
+.cellular-enhancement-info__lead {
     margin-top: 41px;
     margin-bottom: 75px;
 }
 
-.cellular-enhancement__lead::before {
+.cellular-enhancement-info__lead::before {
     width: 60px;
     height: 99px;
     background: url("../img/base/cellular-enhancement-white.svg") no-repeat 0 0;
     background-size: contain;
 }
 
-.cellular-enhancement__equipment {
+.cellular-enhancement-info__equipment {
     font-size: 24px;
     line-height: 1.25em;
 }
 
-.cellular-enhancement__equipment h3 {
+.cellular-enhancement-info__equipment h3 {
     margin-bottom: 34px;
     font-weight: 500;
     font-size: 24px;
     line-height: 1.25em;
 }
 
-.cellular-enhancement__equipment ul {
+.cellular-enhancement-info__equipment ul {
     @include reset-list;
     margin-left: 100px;
 }
 
-.cellular-enhancement__equipment li {
+.cellular-enhancement-info__equipment li {
     position: relative;
     margin-bottom: 9px;
     padding-left: 55px;
 }
 
-.cellular-enhancement__equipment li::before {
+.cellular-enhancement-info__equipment li::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -93,4 +98,24 @@
     height: 28px;
     background: url(../img/base/check-mark.svg) no-repeat 0 0;
     transform: translate(0, -50%);
+}
+
+@media screen and (max-width: 1260px) {
+    .cellular-enhancement-info__problems ul {
+        padding-left: 0;
+    }
+
+    .cellular-enhancement-info__explanation {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+   .cellular-enhancement-info__explanation {
+       padding-top: 20px;
+   }
+
+   .cellular-enhancement-info__equipment ul {
+       margin-left: 0;
+   }
 }

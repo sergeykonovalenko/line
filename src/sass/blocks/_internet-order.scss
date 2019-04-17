@@ -31,3 +31,114 @@
 .internet-order__advantages {
 
 }
+
+.internet-order__advantages {
+    margin-left: 28px;
+    font-size: 24px;
+    line-height: 1.5em;
+    color: #252526;
+}
+
+.internet-order__advantages h3 {
+    margin-bottom: 38px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.internet-order__advantages ul {
+    @include reset-list;
+}
+
+.internet-order__advantages li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    font-weight: 300;
+}
+
+.internet-order__advantages li:last-child {
+    margin-bottom: 0;
+}
+
+.internet-order__advantages li::before {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    margin-right: 32px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+.internet-order__advantages li:nth-child(1)::before {
+    width: 43px;
+    height: 43px;
+    background-image: url("../img/base/internet-order-advantages-icon-1.svg");
+}
+
+.internet-order__advantages li:nth-child(2)::before {
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/base/internet-order-advantages-icon-2.svg");
+}
+
+.internet-order__advantages li:nth-child(3)::before {
+    width: 43px;
+    height: 39px;
+    background-image: url("../img/base/internet-order-advantages-icon-3.svg");
+}
+
+.internet-order__advantages li:nth-child(4)::before {
+    width: 43px;
+    height: 43px;
+    background-image: url("../img/base/internet-order-advantages-icon-4.svg");
+}
+
+.internet-order__advantages *:first-child {
+    margin-top: 0;
+}
+
+.internet-order__advantages *:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1260px) {
+    .internet-order__title br {
+        display: none;
+    }
+
+    .internet-order__request {
+        margin: 0 auto;
+    }
+
+    .internet-order__advantages {
+        width: 750px;
+        margin: 0 auto;
+        padding-top: 65px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .internet-order__advantages {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .internet-order__advantages h3 {
+        margin-bottom: 51px;
+    }
+
+    .internet-order__advantages li {
+        flex-direction: column;
+        margin-bottom: 37px;
+    }
+
+    .internet-order__advantages li:last-child {
+        margin-bottom: 0;
+    }
+
+    .internet-order__advantages li::before {
+        margin-bottom: 15px;
+    }
+}

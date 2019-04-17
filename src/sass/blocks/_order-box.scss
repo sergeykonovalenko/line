@@ -2,6 +2,7 @@
     padding-top: 70px;
     padding-bottom: 85px;
     background-color: #eaf0fe;
+    background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
 }
@@ -30,20 +31,23 @@
     margin: 0 auto;
     padding: 40px 15px 55px;
     border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     box-shadow: 0 0 8px rgba(14, 79, 160, 0.3),
                 0 5px 8px rgba(14, 79, 160, 0.3);
 }
 
 .no-js .order-box__form-wrapper,
 .no-webp .order-box__form-wrapper {
-    background: url("../img/bg/order-box-form.jpg");
+    background-image: url("../img/bg/order-box-form.jpg");
 }
 
 .webp .order-box__form-wrapper {
-    background: url("../img/bg/order-box-form.webp");
+    background-image: url("../img/bg/order-box-form.webp");
 }
 
-.order-box__lead {
+.order-box__title {
     margin-bottom: 35px;
     font-weight: 500;
     font-size: 20px;
@@ -62,6 +66,7 @@
     @include reset-list;
     display: flex;
     flex-wrap: wrap;
+    margin-right: 31px;
 }
 
 .order-box__item {
@@ -122,9 +127,75 @@
 .order-box__button {
     width: 155px;
     height: 38px;
-    margin-left: 31px;
     padding-top: 0;
     padding-bottom: 0;
     font-size: 16px;
     line-height: 38px;
+}
+
+@media screen and (max-width: 1260px) {
+    .order-box__form-wrapper,
+    .order-box__info {
+        width: 100%;
+    }
+
+    .order-box__form {
+        display: block;
+    }
+
+    .order-box label.error {
+        padding-top: 3px;
+    }
+
+    .order-box__list {
+        justify-content: center;
+        margin-right: 41px;
+        margin-bottom: 30px;
+    }
+
+    .order-box__button {
+        width: 205px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .order-box__list {
+        display: block;
+        width: 287px;
+        margin: 0 auto 25px;
+        padding-right: 41px;
+    }
+
+    .order-box__item {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .order-box__item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .order-box__title br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    .order-box__form {
+        width: 246px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .order-box__list {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .order-box__button {
+        margin-left: 41px;
+    }
 }

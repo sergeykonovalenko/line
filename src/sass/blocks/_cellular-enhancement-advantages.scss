@@ -3,7 +3,7 @@
 }
 
 .cellular-enhancement-advantages h2 {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
     font-weight: 500;
     font-size: 30px;
     line-height: 1.3333em;
@@ -16,17 +16,27 @@
     @include reset-list;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cellular-enhancement-advantages li {
     width: 210px;
+    margin-right: 30px;
     padding-top: 85px;
     font-size: 24px;
     line-height: 1.25em;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center top;
+}
+
+.cellular-enhancement-advantages li:nth-child(5n),
+.cellular-enhancement-advantages li:last-child {
+    margin-right: 0;
+}
+
+.cellular-enhancement-advantages li:nth-child(n + 6) {
+    margin-top: 50px;
 }
 
 .cellular-enhancement-advantages li:nth-child(1) {
@@ -52,4 +62,62 @@
 .cellular-enhancement-advantages li:nth-child(5) {
     background-image: url("../img/base/cellular-enhancement-advantages-icon-5.svg");
     background-size: 44px 62px;
+}
+
+@media screen and (max-width: 1260px) {
+    .cellular-enhancement-advantages ul {
+        width: 690px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .cellular-enhancement-advantages li:nth-child(5n) {
+        margin-right: 30px;
+    }
+
+    .cellular-enhancement-advantages li:nth-child(3n),
+    .cellular-enhancement-advantages li:last-child {
+        margin-right: 0;
+    }
+
+    .cellular-enhancement-advantages li:nth-child(n + 4) {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cellular-enhancement-advantages ul {
+        width: 100%;
+    }
+
+    .cellular-enhancement-advantages li:nth-child(3n) {
+        margin-right: 30px;
+    }
+
+    .cellular-enhancement-advantages li:nth-child(2n),
+    .cellular-enhancement-advantages li:last-child {
+        margin-right: 0;
+    }
+
+    .cellular-enhancement-advantages li:nth-child(n + 3) {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cellular-enhancement-advantages ul {
+        display: block;
+    }
+
+    .cellular-enhancement-advantages li,
+    .cellular-enhancement-advantages li:nth-child(2n),
+    .cellular-enhancement-advantages li:nth-child(3n),
+    .cellular-enhancement-advantages li:last-child {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .cellular-enhancement-advantages li:nth-child(n + 2) {
+        margin-top: 50px;
+    }
 }

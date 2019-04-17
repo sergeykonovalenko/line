@@ -28,13 +28,24 @@
 
 .sidenav__list {
     @include reset-list;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.sidenav__list:first-child {
+    padding-top: 0;
+}
+
+.sidenav__list:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
 }
 
 .sidenav__item {
 
 }
 
-.sidenav__item a {
+.sidenav__link {
     display: flex;
     align-items: center;
     height: 48px;
@@ -50,27 +61,52 @@
     transition: all 0.3s ease;
 }
 
-.sidenav__item a:hover,
-.sidenav__item a:active,
-.sidenav__item a:focus {
+.sidenav__link:hover,
+.sidenav__link:active,
+.sidenav__link:focus {
     text-decoration: none;
+    color: #212121;
     background-color: rgba(0, 0, 0, 0.04);
     opacity: 1;
 }
 
-.sidenav__item--current a {
-    color: #0b79d3;
+.sidenav__link--phone {
+    background-color: #e3f2fd;
+    opacity: 1;
 }
 
-.sidenav__item a::before {
-    content: "";
-    display: block;
+.show-main-nav .sidenav__link--phone {
+    background-color: rgba(0, 0, 0, 0.04);
+    opacity: 0.67;
+}
+
+.sidenav__link--phone:hover,
+.sidenav__link--phone:active,
+.sidenav__link--phone:focus {
+    background-color: #e3f2fd;
+    opacity: 1;
+}
+
+.sidenav__item--current .sidenav__link {
+    color: #0b79d3;
+    opacity: 1;
+}
+
+.sidenav__link--extra {
+    padding-left: 56px;
+}
+
+.sidenav__link span:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-shrink: 0;
     width: 24px;
-    height: 100%;
     margin-right: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+.sidenav__item--current svg {
+    fill: #0b79d3;
 }
 
 @media screen and (max-width: 768px) {

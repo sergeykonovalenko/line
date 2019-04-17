@@ -2,22 +2,18 @@
     margin-top: -70px;
     color: #fff;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
 }
 
 .offer-common h1 {
+    margin-bottom: 0;
     font-weight: 500;
     font-size: 36px;
     line-height: 1.3333em;
     text-align: center;
     text-transform: uppercase;
-}
-
-@media screen and (max-width: 1920px) {
-    .offer-common {
-        background-size: cover;
-    }
 }
 
 @media screen and (max-width: 1260px) {

@@ -66,3 +66,46 @@
     height: 46px;
     line-height: 46px;
 }
+
+@media screen and (max-width: 1260px) {
+    .application-form {
+        width: 452px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .application-form__list {
+        margin-bottom: 20px;
+    }
+
+    .application-form__list,
+    .application-form__item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .application-form__item:nth-child(n + 3) {
+        margin-top: 20px;
+    }
+
+    .application-form label.error {
+        padding-top: 3px;
+    }
+
+    .application-form__button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .application-form {
+        width: 220px;
+    }
+
+    .application-form__item {
+        margin-right: 0;
+    }
+
+    .application-form__item:nth-child(n + 2) {
+        margin-top: 20px;
+    }
+}

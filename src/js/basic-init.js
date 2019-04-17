@@ -7,22 +7,6 @@ $(document).ready(function () {
     let scene = document.getElementById('js-scene');
     let parallax = scene ? new Parallax(scene) : '';
 
-    // parallax background
-    if (!is_mobile) {
-        let $window = $(window);
-
-        $('[data-type="background"]').each(function() {
-            let $bgobj = $(this);
-
-            $(window).scroll(function() {
-                let yPos = -($window.scrollTop() / $bgobj.data('speed'));
-                let coords = '50% '+ yPos + 'px';
-
-                $bgobj.css({ backgroundPosition: coords });
-            });
-        });
-    }
-
     // show/hide mobile menu
     $('.top-nav__hamburger').on('click', function () {
         $('html').toggleClass('show-main-nav');
@@ -188,7 +172,7 @@ $(document).ready(function () {
                         },800);
                         setTimeout(function () {
                             $('.modal-thanks').modal('show');
-                            $form.trigger('reset');
+                            $( 'input:not([type="hidden"]), textarea' ).val('');
                             $('.form-extra__item').removeClass('form-extra__item--should-float');
                         },1100);
                     });
@@ -203,7 +187,6 @@ $(document).ready(function () {
     });
 
     ////////////////////////////////////////////////////////////////////////////
-
 
     function isMobile() {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));

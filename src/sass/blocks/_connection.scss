@@ -163,6 +163,10 @@
 }
 
 @media screen and (max-width: 1260px) {
+    .connection__list ul {
+        justify-content: center;
+    }
+
     .connection__list {
         width: 740px;
         margin-right: auto;
@@ -173,7 +177,8 @@
         margin-right: 30px;
     }
 
-    .connection__list li:nth-child(2n) {
+    .connection__list li:nth-child(2n),
+    .connection__list li:last-child {
         margin-right: 0;
     }
 

@@ -1,6 +1,6 @@
 .offer-cctv {
     padding-top: 160px;
-    padding-bottom: 125px;
+    padding-bottom: 130px;
     background-color: #0d0b6c;
 }
 
@@ -11,4 +11,10 @@
 
 .webp .offer-cctv {
     background-image: url("../img/bg/offer-cctv.webp");
+}
+
+@media screen and (max-width: 1260px) {
+    .offer-cctv {
+        padding-top: 90px;
+    }
 }

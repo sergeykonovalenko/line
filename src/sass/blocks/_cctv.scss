@@ -57,3 +57,9 @@
     height: 64px;
     background-image: url("../img/base/cctv-white.svg");
 }
+
+@media screen and (max-width: 1260px) {
+    .cctv__installation-steps {
+        width: 100%;
+    }
+}

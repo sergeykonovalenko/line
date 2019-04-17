@@ -41,6 +41,7 @@
     position: absolute;
     top: 50%;
     left: 0;
+    display: block;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -81,4 +82,25 @@
     display: block;
     margin-bottom: 13px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .network__advantages h3 {
+        margin-bottom: 63px;
+    }
+
+    .network__advantages li {
+        margin-bottom: 60px;
+        padding-left: 0;
+    }
+
+    .network__advantages li:last-child {
+        margin-bottom: 0;
+    }
+
+    .network__advantages li::before {
+        position: static;
+        margin: 0 auto 22px;
+        transform: none;
+    }
 }

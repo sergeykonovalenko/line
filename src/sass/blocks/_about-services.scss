@@ -27,6 +27,7 @@
 .about-services__list ul {
     @include reset-list;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -41,8 +42,13 @@
     background-position: center top;
 }
 
-.about-services__list li:nth-child(5n) {
+.about-services__list li:nth-child(5n),
+.about-services__list li:last-child {
     margin-right: 0;
+}
+
+.about-services__list li:nth-child(n + 6) {
+    margin-top: 50px;
 }
 
 .about-services__list li:nth-child(1) {
@@ -77,4 +83,84 @@
     font-size: 20px;
     line-height: 1.2em;
     color: #252526;
+}
+
+@media screen and (max-width: 1260px) {
+    .about-services__list {
+        width: 696px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .about-services__list li:nth-child(5n) {
+        margin-right: 15px;
+    }
+
+    .about-services__list li:nth-child(3n),
+    .about-services__list li:last-child {
+        margin-right: 0;
+    }
+
+    .about-services__list li:nth-child(n + 4) {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about-services__title br {
+        display: none;
+    }
+
+    .about-services__list {
+        width: 690px;
+    }
+
+    .about-services__list li {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-services__list {
+        width: 459px;
+    }
+
+    .about-services__list li {
+        width: 222px;
+    }
+
+    .about-services__list li:nth-child(3n) {
+        margin-right: 15px;
+    }
+
+    .about-services__list li:nth-child(2n),
+    .about-services__list li:last-child {
+        margin-right: 0;
+    }
+
+    .about-services__list li:nth-child(n + 3) {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-services__list {
+        width: 100%;
+    }
+    
+    .about-services__list ul {
+        display: block;
+    }
+
+    .about-services__list li,
+    .about-services__list li:nth-child(2n),
+    .about-services__list li:nth-child(3n),
+    .about-services__list li:last-child {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .about-services__list li:nth-child(n + 2) {
+        margin-top: 50px;
+    }
 }

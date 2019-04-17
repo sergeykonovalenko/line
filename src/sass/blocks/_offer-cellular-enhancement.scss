@@ -1,6 +1,6 @@
 .offer-cellular-enhancement {
     padding-top: 160px;
-    padding-bottom: 125px;
+    padding-bottom: 130px;
     background-color: #0b1265;
 }
 
@@ -11,4 +11,10 @@
 
 .webp .offer-cellular-enhancement {
     background-image: url("../img/bg/offer-cellular-enhancement.webp");
+}
+
+@media screen and (max-width: 1260px) {
+    .offer-cellular-enhancement {
+        padding-top: 90px;
+    }
 }

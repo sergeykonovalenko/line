@@ -1,6 +1,6 @@
 .offer-vpn {
     padding-top: 160px;
-    padding-bottom: 125px;
+    padding-bottom: 130px;
     background-color: #0b1865;
 }
 
@@ -11,4 +11,10 @@
 
 .webp .offer-vpn {
     background-image: url("../img/bg/offer-internet.webp");
+}
+
+@media screen and (max-width: 1260px) {
+    .offer-vpn {
+        padding-top: 90px;
+    }
 }

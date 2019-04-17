@@ -29,3 +29,9 @@
     text-align: center;
     color: #102542;
 }
+
+@media screen and (max-width: 992px) {
+    .connection-request__title br {
+        display: none;
+    }
+}

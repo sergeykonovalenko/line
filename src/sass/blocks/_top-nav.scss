@@ -24,8 +24,6 @@ body.scrolled-down .top-nav {
 .top-nav__hamburger {
     position: relative;
     display: none;
-    justify-content: center;
-    align-items: center;
     width: 45px;
     height: 42px;
     margin-right: 25px;
@@ -40,57 +38,50 @@ body.scrolled-down .top-nav {
     outline: none;
 }
 
-.top-nav__hamburger span {
-    position: relative;
-    transition-timing-function: cubic-bezier(.55, .055, .675, .19);
-    transition-duration: 75ms;
-}
-
 .top-nav__hamburger span,
-.top-nav__hamburger span:after,
-.top-nav__hamburger span:before {
+.top-nav__hamburger::before,
+.top-nav__hamburger::after {
+    position: relative;
     display: block;
     width: 25px;
     height: 4px;
     background-color: #292a2c;
     border-radius: 4px;
-    transition-property: transform;
 }
 
-.top-nav__hamburger span:after,
-.top-nav__hamburger span:before {
+.top-nav__hamburger::before {
     content: '';
-    position: absolute;
-    transition-timing-function: ease;
-    transition-duration: .15s;
+    top: 0;
+    transition: transform 0.5s, top 0.2s;
 }
 
-.top-nav__hamburger span:before {
-    top: -9px;
-    transition: top 75ms ease .12s, opacity 75ms ease;
+.top-nav__hamburger::after {
+    content: '';
+    top: 10px;
+    transition: all 0.5s;
+    transition-delay: 0.1s;
 }
 
-.top-nav__hamburger span:after {
-    bottom: -9px;
-    transition: bottom 75ms ease .12s, transform 75ms cubic-bezier(.55, .055, .675, .19);
+.top-nav__hamburger span {
+    top: 5px;
+    transition: transform 0.5s, top 0.2s;
+    transition-delay: 0.2s, 0s;
+}
+
+.show-main-nav .top-nav__hamburger::before {
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+.show-main-nav .top-nav__hamburger::after {
+    opacity: 0;
+    top: 0;
+    transform: rotate(180deg);
 }
 
 .show-main-nav .top-nav__hamburger span {
-    transition-delay: .12s;
-    transition-timing-function: cubic-bezier(.215, .61, .355, 1);
-    transform: rotate(45deg);
-}
-
-.show-main-nav .top-nav__hamburger span:before {
-    top: 0;
-    transition: top 75ms ease, opacity 75ms ease .12s;
-    opacity: 0;
-}
-
-.show-main-nav .top-nav__hamburger span:after {
-    bottom: 0;
-    transition: bottom 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) .12s;
-    transform: rotate(-90deg);
+    top: 5px;
+    transform: rotate(-135deg);
 }
 
 .top-nav__call-order {
@@ -123,7 +114,7 @@ body.scrolled-down .top-nav {
     }
 
     .top-nav__hamburger {
-        display: flex;
+        display: block;
     }
 }
 

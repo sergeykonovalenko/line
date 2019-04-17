@@ -1,6 +1,6 @@
 .offer-connection-request {
     padding-top: 130px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     background-color: #151872;
 }
 
@@ -17,4 +17,14 @@
     font-weight: 400;
     line-height: 1.2em;
     text-transform: none;
+}
+
+@media screen and (max-width: 1260px) {
+    .offer-connection-request {
+        padding-top: 60px;
+    }
+
+    .offer-connection-request br {
+        display: none;
+    }
 }

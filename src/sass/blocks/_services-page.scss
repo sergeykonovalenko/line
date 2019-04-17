@@ -44,6 +44,7 @@
     position: absolute;
     top: 50%;
     left: 0;
+    display: block;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -118,6 +119,7 @@
 
 .services-page__btn-box {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 0;
 }
 
@@ -148,4 +150,60 @@
 .services-page__button::before {
     padding-top: 9px;
     padding-bottom: 9px;
+}
+
+@media screen and (max-width: 1260px) {
+    .services-page__body br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .services-page__body {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .services-page__text {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services-page__title {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .services-page__title::before {
+        position: static;
+        margin: 0 auto 30px;
+        transform: none;
+    }
+
+    .services-page__btn-box {
+        justify-content: center;
+    }
+
+    .services-page__btn-box .services-page__button:first-child {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .services-page__btn-box {
+        display: block;
+    }
+
+    .services-page__button,
+    .services-page__btn-box .services-page__button:first-child {
+        display: block;
+        width: 177px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .services-page__btn-box .services-page__button:first-child {
+        margin-bottom: 6px;
+    }
 }
