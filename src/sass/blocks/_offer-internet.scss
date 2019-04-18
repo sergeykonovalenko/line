@@ -1,6 +1,4 @@
 .offer-internet {
-    padding-top: 160px;
-    padding-bottom: 130px;
     background-color: #0b1865;
 }
 
@@ -11,10 +9,4 @@
 
 .webp .offer-internet {
     background-image: url("../img/bg/offer-internet.webp");
-}
-
-@media screen and (max-width: 1260px) {
-    .offer-internet {
-        padding-top: 90px;
-    }
 }

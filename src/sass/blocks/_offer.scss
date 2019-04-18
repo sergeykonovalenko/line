@@ -1,33 +1,32 @@
-.offer {
+.offer-home {
     position: relative;
     z-index: 1;
-    padding-top: 190px;
-    padding-bottom: 170px;
     background-color: #030f5d;
 }
 
-.no-webp .offer,
-.no-js .offer {
+.no-webp .offer-home,
+.no-js .offer-home {
     background-image: url("../img/bg/offer.jpg");
 }
 
-.webp .offer {
+.webp .offer-home {
     background-image: url("../img/bg/offer.webp");
 }
 
-.offer__title {
+.offer-home__title-box {
     position: relative;
     z-index: 2;
+    min-height: 540px;
 }
 
-.offer__title h1 {
+.offer-home__title-box h1 {
     font-weight: 400;
     font-size: 30px;
     line-height: 1.2em;
     text-transform: none;
 }
 
-.offer__title strong {
+.offer-home__title-box strong {
     display: block;
     margin-bottom: 10px;
     font-weight: 500;
@@ -36,7 +35,7 @@
     text-transform: uppercase;
 }
 
-.offer__polygon {
+.offer-home__polygon {
     position: absolute;
     z-index: 1;
     top: 22px;
@@ -45,37 +44,37 @@
 }
 
 @media screen and (max-width: 1260px) {
-    .offer {
-        padding-top: 130px;
+    .offer-home {
+        //padding-top: 130px;
     }
 
-    .offer__polygon {
+    .offer-home__polygon {
         top: 50px;
         right: -135px;
     }
 
-    .offer__polygon img {
+    .offer-home__polygon img {
         max-width: 85%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .offer__polygon {
+    .offer-home__polygon {
         display: none;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .offer {
-        padding-top: 110px;
-        padding-bottom: 160px;
+    .offer-home {
+        //padding-top: 110px;
+        //padding-bottom: 160px;
     }
 
-    .offer__title h1 {
+    .offer-home__title-box h1 {
         font-size: 24px;
     }
 
-    .offer__title strong {
+    .offer-home__title-box strong {
         font-size: 27px;
     }
 }

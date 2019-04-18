@@ -1,6 +1,4 @@
 .offer-about {
-    padding-top: 115px;
-    padding-bottom: 105px;
     background-color: #0e0f56;
 }
 
@@ -17,12 +15,6 @@
     font-weight: 400;
     line-height: 1.2em;
     text-transform: none;
-}
-
-@media screen and (max-width: 1260px) {
-    .offer-about {
-        padding-top: 45px;
-    }
 }
 
 @media screen and (max-width: 768px) {

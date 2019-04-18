@@ -21,6 +21,7 @@ body.scrolled-down .top-nav {
     cursor: pointer;
 }
 
+/***** Style for hamburger *****/
 .top-nav__hamburger {
     position: relative;
     display: none;
@@ -83,6 +84,7 @@ body.scrolled-down .top-nav {
     top: 5px;
     transform: rotate(-135deg);
 }
+/***** End style for hamburger *****/
 
 .top-nav__call-order {
     margin-left: auto;

@@ -7,17 +7,31 @@
     overflow: hidden;
 }
 
-.offer-common h1 {
+.offer-common__title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 340px;
+    padding-top: 120px;
+    padding-bottom: 110px;
+}
+
+.offer-common__title-box h1 {
     margin-bottom: 0;
     font-weight: 500;
     font-size: 36px;
     line-height: 1.3333em;
-    text-align: center;
     text-transform: uppercase;
+    text-align: center;
 }
 
 @media screen and (max-width: 1260px) {
     .offer-common {
         margin-top: 0;
+    }
+
+    .offer-common__title-box {
+        min-height: 270px;
+        padding-top: 50px;
     }
 }
