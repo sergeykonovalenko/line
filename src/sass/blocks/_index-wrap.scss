@@ -1,0 +1,16 @@
+.index-wrap {
+    padding-bottom: 110px;
+    background-color: #e6eff8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.no-js .index-wrap,
+.no-webp .index-wrap {
+    background-image: url("../img/bg/who-chooses-us.jpg");
+}
+
+.webp .index-wrap {
+    background-image: url("../img/bg/who-chooses-us.webp");
+}

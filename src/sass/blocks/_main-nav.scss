@@ -24,6 +24,7 @@
 
 .main-nav__list {
     @include reset-list;
+
     display: flex;
     justify-content: center;
 }
@@ -45,7 +46,7 @@
     font-size: 24px;
     color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease-in;
 }
 
 .main-nav__list a:hover,
@@ -62,7 +63,7 @@
     height: 6px;
     background: #ee423d;
     background: linear-gradient(45deg, rgba(227,58,47,1) 0%, rgba(245,71,71,1) 100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.15s ease-in;
     transform: scaleX(0);
 }
 

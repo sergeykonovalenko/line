@@ -35,11 +35,11 @@
         right: -41px;
         width: 40px;
         height: 40px;
-    }
 
-    .modal-order__close::before,
-    .modal-order__close::after {
-        width: 30px;
+        &::before,
+        &::after {
+            width: 30px;
+        }
     }
 }
 
@@ -47,11 +47,11 @@
     .modal-order__close {
         top: 10px;
         right: 12px;
-    }
 
-    .modal-order__close::before,
-    .modal-order__close::after {
-        width: 20px;
+        &::before,
+        &::after {
+            width: 20px;
+        }
     }
 
     .modal-order .modal-content {

@@ -28,6 +28,7 @@
 
 .sidenav__list {
     @include reset-list;
+
     padding: 8px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -59,32 +60,28 @@
     overflow: hidden;
     opacity: 0.67;
     transition: all 0.3s ease;
-}
 
-.sidenav__link:hover,
-.sidenav__link:active,
-.sidenav__link:focus {
-    text-decoration: none;
-    color: #212121;
-    background-color: rgba(0, 0, 0, 0.04);
-    opacity: 1;
+    &:hover {
+        text-decoration: none;
+        color: #212121;
+        background-color: rgba(0, 0, 0, 0.04);
+        opacity: 1;
+    }
 }
 
 .sidenav__link--phone {
     background-color: #e3f2fd;
     opacity: 1;
+
+    &:hover {
+        background-color: #e3f2fd;
+        opacity: 1;
+    }
 }
 
 .show-main-nav .sidenav__link--phone {
     background-color: rgba(0, 0, 0, 0.04);
     opacity: 0.67;
-}
-
-.sidenav__link--phone:hover,
-.sidenav__link--phone:active,
-.sidenav__link--phone:focus {
-    background-color: #e3f2fd;
-    opacity: 1;
 }
 
 .sidenav__item--current .sidenav__link {

@@ -127,7 +127,9 @@ gulp.task('js-vendor', function () {
 /* BrowserSync */
 gulp.task('serve', function () {
     server.init({
-        server: 'build/'
+        server: 'build/',
+        online: true,
+        tunnel: 'site'
     });
 
     gulp.watch('src/*.html', gulp.series('html', 'refresh'));

@@ -1,19 +1,5 @@
 .who-chooses-us {
     padding-top: 105px;
-    padding-bottom: 110px;
-    background-color: #e6eff8;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.no-js .who-chooses-us,
-.no-webp .who-chooses-us {
-    background-image: url("../img/bg/who-chooses-us.jpg");
-}
-
-.webp .who-chooses-us {
-    background-image: url("../img/bg/who-chooses-us.webp");
 }
 
 .who-chooses-us__title {
@@ -36,6 +22,7 @@
 
 .who-chooses-us__list ul {
     @include reset-list;
+
     display: flex;
     flex-wrap: wrap;
 }

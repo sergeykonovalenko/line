@@ -5,6 +5,7 @@
 
 .services__list {
     @include reset-list;
+
     display: flex;
     flex-wrap: wrap;
     margin-top: -60px;
@@ -28,7 +29,7 @@
     background-color: #21428e;
     border: 1px solid #21428e;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease-in;
 }
 
 .services__link--two-lines {

@@ -8,6 +8,7 @@
 
 .our-clients__list {
     @include reset-list;
+
     display: flex;
     flex-wrap: wrap;
 }

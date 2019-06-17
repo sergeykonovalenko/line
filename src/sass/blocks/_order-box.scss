@@ -64,6 +64,7 @@
 
 .order-box__list {
     @include reset-list;
+
     display: flex;
     flex-wrap: wrap;
     margin-right: 31px;

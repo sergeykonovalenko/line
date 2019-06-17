@@ -19,6 +19,7 @@
 
 .cellular-enhancement-info__problems ul {
     @include reset-list;
+
     padding-left: 70px;
 }
 
@@ -80,6 +81,7 @@
 
 .cellular-enhancement-info__equipment ul {
     @include reset-list;
+
     margin-left: 100px;
 }
 

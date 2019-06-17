@@ -3,9 +3,39 @@ $(document).ready(function () {
 
     const is_mobile = isMobile();
 
-    // parallax when moving the mouse
-    let scene = document.getElementById('js-scene');
-    let parallax = scene ? new Parallax(scene) : '';
+    // parallax
+    if (!is_mobile) {
+        let scene = document.querySelectorAll('.js-scene');
+        scene.forEach(function (sceneItem) {
+            let parallaxScene = scene ? new Parallax(sceneItem) : '';
+        });
+    }
+
+    // offer home slider
+    $('.offer-home').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        adaptiveHeight: true,
+        prevArrow: '<button class="offer-home__arrow offer-home__arrow_prev" type="button"><span class="visually-hidden">Назад</span></button>',
+        nextArrow: '<button class="offer-home__arrow offer-home__arrow_next" type="button"><span class="visually-hidden">Вперед</span></button>',
+        responsive: [
+            {
+                breakpoint: 1260,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                }
+            }
+        ]
+    });
 
     // show/hide mobile menu
     $('.top-nav__hamburger').on('click', function () {

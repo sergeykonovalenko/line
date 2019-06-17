@@ -26,6 +26,7 @@
 
 .about-services__list ul {
     @include reset-list;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

@@ -1,6 +1,5 @@
 .tariffs {
     padding-top: 105px;
-    padding-bottom: 120px;
 }
 
 .tariffs__title {
@@ -20,6 +19,7 @@
 
 .tariffs__list {
     @include reset-list;
+
     display: flex;
     flex-wrap: wrap;
 }

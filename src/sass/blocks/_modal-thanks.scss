@@ -56,11 +56,11 @@
         right: -41px;
         width: 40px;
         height: 40px;
-    }
 
-    .modal-thanks__close::before,
-    .modal-thanks__close::after {
-        width: 30px;
+        &::before,
+        &::after {
+            width: 30px;
+        }
     }
 }
 

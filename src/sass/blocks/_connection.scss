@@ -12,6 +12,7 @@
 
 .connection__list ul {
     @include reset-list;
+
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;

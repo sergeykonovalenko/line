@@ -6,6 +6,7 @@
 
 .application-form__list {
     @include reset-list;
+
     display: flex;
     margin-right: 12px;
     flex-wrap: wrap;
